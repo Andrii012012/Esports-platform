@@ -1,0 +1,232 @@
+@media (max-width: 60em) {
+  .footer__body-list {
+    flex-wrap: nowrap;
+  }
+  .footer__logo {
+    margin-right: 14.88%;
+  }
+  .footer__item:first-child {
+    margin-right: 8.636%;
+  }
+  .footer__item:nth-child(2) {
+    margin-right: 4.772%;
+  }
+  .footer__content {
+    margin-top: 5.5555rem;
+  }
+  .footer__img {
+    left: 50.1041%;
+  }
+  .footer__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.944rem 0.777rem 0rem 1.6111rem;
+    margin-bottom: 4.72rem;
+  }
+  .footer__info-webside {
+    font-size: 0.777rem;
+  }
+  .footer__politics {
+    justify-self: flex-end;
+    padding-left: 0.5rem;
+  }
+  .footer__rules {
+    margin-right: 0rem;
+    padding-right: 0rem;
+    justify-self: flex-end;
+    padding-right: 0.5rem;
+  }
+  .footer__rights {
+    margin-right: 0%;
+    padding-right: 0.5rem;
+  }
+  .footer__navigator {
+    margin-bottom: 5.611rem;
+  }
+  .footer__effect-top {
+    top: -8.875%;
+    left: 58.645%;
+  }
+  .footer__effect-bottom {
+    top: 53.875%;
+    left: 2.083%;
+  }
+  .footer__fragment-black-big {
+    top: 61%;
+    left: 82.29%;
+  }
+  .footer__fragment-black-big-two {
+    top: 47.625%;
+    left: 6.5625%;
+    right: initial;
+    bottom: initial;
+  }
+  .footer__social-media {
+    margin-bottom: 1.666rem;
+  }
+  .footer__social-media img {
+    width: 20px;
+    height: 20px;
+  }
+  .footer__body-info {
+    display: contents;
+  }
+}
+@media (max-width: 40em) {
+  .footer__menu-items {
+    margin-right: 10px;
+    width: 100%;
+  }
+  .footer__body-list {
+    margin-right: 9px;
+  }
+  .footer__item:first-child {
+    margin-right: 6px;
+  }
+  .footer__logo {
+    margin-right: 0%;
+    margin-bottom: 1.38rem;
+  }
+  .footer__social-media {
+    margin-left: 0.833rem;
+  }
+  .footer__body-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .footer__rules {
+    padding-right: 0rem;
+  }
+  .footer__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 1.944rem 0rem 0rem 0rem;
+    margin-bottom: 1.88rem;
+  }
+  .footer__info-webside {
+    padding: 0.833rem 0rem 0rem 0rem;
+  }
+  .footer__rights {
+    padding: 0.833rem 0rem;
+  }
+  .footer__navigator {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 0.634fr 1fr;
+  }
+  .footer__img {
+    left: 51.66%;
+  }
+  .footer__effect-bottom {
+    top: 50%;
+    left: -18.28%;
+  }
+  .footer__effect-top {
+    top: -21.375%;
+    left: 60.468%;
+  }
+  .footer__fragment-black-big-two {
+    display: none;
+  }
+  .footer__fragment-black-big {
+    top: 56.625%;
+    left: 86.7187%;
+  }
+}
+@media (max-width: 28.125em) {
+  .footer__body-info {
+    display: contents;
+  }
+  .footer__info {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 5px;
+  }
+  .footer__info-webside {
+    justify-self: center;
+  }
+  .footer__navigator {
+    grid-template-columns: 1fr;
+    margin-bottom: 1.388rem;
+  }
+  .footer__body-menu {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    margin-bottom: 5.0555rem;
+  }
+  .footer__body-list {
+    flex-wrap: wrap;
+  }
+  .footer__logo {
+    margin-bottom: 1.888rem;
+  }
+  .footer__social-media-body {
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0px !important;
+  }
+  .footer__social-media-section {
+    display: none;
+  }
+  .footer__img {
+    display: none;
+  }
+  .footer__list-social-media {
+    justify-content: center;
+  }
+  .footer__item a {
+    margin-bottom: 0em;
+    font-size: 0.833rem;
+  }
+  .footer__section {
+    font-size: 0.777rem;
+  }
+  .footer__info-webside {
+    font-size: 0.777rem;
+  }
+  .footer__info-text {
+    margin-bottom: 0.55rem;
+  }
+  .footer__info {
+    margin-bottom: 1.111rem;
+  }
+  .footer__rights {
+    padding: 0rem;
+    margin: 1.11rem 0rem 0.833rem 0rem;
+  }
+  .footer__body-list {
+    margin-right: 0px;
+  }
+  .footer__item:nth-child(2) {
+    margin-right: 0%;
+  }
+  .footer__social-media-body {
+    margin-right: 0rem;
+  }
+  .footer__social-media {
+    margin: 0;
+    margin-right: 5px;
+  }
+  .footer__social-media:last-child {
+    margin-right: 0px;
+  }
+  .footer__social-media {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__effect-bottom {
+    top: 74.625%;
+    left: -67.22%;
+  }
+  .footer__effect-top {
+    top: -14.125%;
+    left: 31.944%;
+  }
+  .footer__fragment-black-big {
+    top: 63.75%;
+    left: 13.88%;
+  }
+}/*# sourceMappingURL=footerMedia.css.map */

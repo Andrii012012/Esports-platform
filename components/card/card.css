@@ -1,0 +1,464 @@
+.card-characters {
+  width: 100%;
+  background-color: rgb(9, 11, 25);
+  position: relative;
+}
+
+.card-characters__container {
+  max-width: 49.16rem;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.38rem;
+  padding: 0.44rem 0rem;
+}
+
+.card-characters__container {
+  margin-top: 11.72rem;
+}
+
+.card-characters__title {
+  text-align: center;
+  margin-bottom: 0.83rem;
+}
+
+.card-characters__subtitle {
+  text-align: center;
+  margin-bottom: 6.833rem;
+}
+
+.swiper-slide-active .card__content {
+  opacity: 1;
+}
+
+.card__content {
+  opacity: 0;
+  font-family: "Teko";
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.card__level {
+  position: absolute;
+  top: 16.507%;
+  left: 12.4555%;
+  transform: 31.2px, 70px;
+  font-size: 2.06rem;
+  line-height: 53.37px;
+}
+
+.card__info-card {
+  width: 37.24px;
+  height: 37.24px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card__role {
+  position: absolute;
+  top: 17.349%;
+  left: 36.298%;
+}
+
+.card__discipline {
+  position: absolute;
+  top: 28.55%;
+  left: 10.9608%;
+}
+
+.card__industry {
+  position: absolute;
+  top: 42.168%;
+  left: 10.9608%;
+}
+
+.card__team {
+  position: absolute;
+  top: 42.65%;
+  left: 70.106%;
+}
+
+.card__name {
+  position: absolute;
+  top: 54.9397%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  z-index: 2;
+  font-size: 2.06rem;
+  line-height: 1em;
+  text-align: center;
+}
+
+.card__conteiner-statics {
+  display: flex;
+  position: absolute;
+  top: 71.113%;
+  left: 31.49%;
+  z-index: 2;
+}
+
+.card-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__statics {
+  margin-right: 0.76rem;
+  position: relative;
+  font-family: "Teko";
+  font-weight: 400;
+}
+
+.card__statics:last-child {
+  margin-right: 0rem;
+}
+
+.card-info-statics {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+  letter-spacing: 4%;
+  line-height: 1.08em;
+}
+
+.card__icon-active-card {
+  position: absolute;
+  top: 20.33%;
+  right: 20.42%;
+}
+
+.card__popup-description {
+  font-family: "Raleway";
+  background-color: rgb(14, 16, 30);
+  padding: 0.55rem 0.88rem;
+  border: 1px solid #514c75;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 0.44rem;
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  opacity: 0;
+  white-space: nowrap;
+  visibility: hidden;
+  transform: translate(-50%, -100%);
+  display: none;
+}
+.card__popup-description::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13.25px;
+  background: url("../../img/card/card-fragment-arrow.svg") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.card__popup-description--active {
+  top: -5px;
+  padding: 0.1rem 0.88rem;
+}
+
+.active-popup-description .card__popup-description {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.card-fragment-black-big {
+  position: absolute;
+  top: 58.8%;
+  left: 11.7187%;
+  transform: translate(-50%);
+}
+
+.card-fragment-white-big {
+  position: absolute;
+  bottom: 13.4%;
+  right: 14.023%;
+  transform: translate(-50%, 0%);
+}
+
+.card-fragment-black-medium {
+  position: absolute;
+  top: 20.1%;
+  right: 17.916%;
+}
+
+.card-fragment-white-medium {
+  position: absolute;
+  bottom: 9.413%;
+  left: 25.156%;
+  transform: translate(0%, -50%);
+}
+
+.card-fragment-black-small {
+  position: absolute;
+  top: 15.7%;
+  left: 15.83%;
+  transform: translate(-50%);
+}
+
+.card-characters__effect-top {
+  position: absolute;
+  top: 0%;
+  right: 9.375%;
+}
+
+.card-characters__effect-bottom {
+  position: absolute;
+  bottom: 2.7%;
+  left: 5.989%;
+}
+
+.card__icon-info {
+  position: absolute;
+  bottom: 0;
+  right: 27.1927%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card__card-img {
+  min-height: 100%;
+}
+
+.card-content-two__icon-active-card {
+  top: 17.955%;
+}
+
+.card-content-two__level {
+  top: 13.715%;
+}
+
+.card-content-two__role {
+  top: 15.7107%;
+}
+
+.card-content-two__discipline {
+  top: 27.4314%;
+}
+
+.card-content-two__industry {
+  top: 41.1471%;
+}
+
+.card-content-two__team {
+  top: 41.8952%;
+}
+
+.swiper-slide-active .card__container-card {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+  filter: blur(0px);
+}
+
+.card__container-card {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0.7);
+  filter: blur(12px);
+}
+
+.card__arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.card__button-next {
+  top: 50%;
+  right: 0%;
+  z-index: 2;
+  background-image: url("../../img/card/card-arrow-r.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(0, -50%);
+}
+
+.card__button-prev {
+  top: 50%;
+  left: 0%;
+  background-image: url("../../img/card/card-arrow-l.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: translate(0, -50%);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 281px;
+  height: auto;
+  position: relative;
+  top: 50%;
+}
+
+.card-wrapper {
+  display: flex;
+}
+
+.card__icon-swipe {
+  display: none;
+  position: absolute;
+}
+
+@media (max-width: 60em) {
+  .card-characters__container {
+    margin-top: 8.11rem;
+  }
+  .swiper-slide {
+    width: 280px;
+    height: 413px;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 4.22rem;
+  }
+  .card {
+    padding: 0.5rem 0rem;
+  }
+  .card-fragment-black-small,
+  .card-fragment-white-big,
+  .card-fragment-black-big,
+  .card-fragment-white-medium,
+  .card-characters__effect-bottom {
+    display: none;
+  }
+  .card-fragment-black-medium {
+    top: 22.62%;
+    right: 5.208%;
+  }
+  .card-characters__effect-top {
+    top: -19%;
+    right: -16.875%;
+  }
+}
+@media (max-width: 40em) {
+  .card__container-card {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0.563);
+  }
+  .card-characters__container {
+    margin-top: 7.555rem;
+  }
+  .card {
+    margin-bottom: 1.38rem;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 3.27rem;
+  }
+  .card-fragment-black-medium {
+    top: 19.875%;
+    right: 8.281%;
+  }
+  .card-characters__effect-top {
+    top: -18.75%;
+    right: -28.43%;
+  }
+  .card__icon-info {
+    bottom: 3.51%;
+    right: 24.16%;
+  }
+}
+@media (max-width: 22.5em) {
+  .card__popup-description {
+    font-size: 0.777rem;
+  }
+  .card-characters__container {
+    margin-top: 6.166rem;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 3.5rem;
+  }
+  .swiper-slide-active .card__container-card {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide-active .card__card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 190px !important;
+    height: 281px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .card__container-card {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0.523);
+    height: 269.98px;
+    filter: blur(3px);
+  }
+  .card__arrow {
+    display: none;
+  }
+  .card__info-card {
+    width: 25.58px;
+    height: 25.58px;
+  }
+  .card {
+    padding: 4.166rem 0rem;
+  }
+  .card__icon-info {
+    bottom: 0%;
+    right: 0.833rem;
+  }
+  .card__icon-swipe {
+    display: block;
+    cursor: pointer;
+    bottom: 0;
+    left: 0.55rem;
+  }
+  .card__level {
+    top: 12.37%;
+    font-size: 1.416rem;
+  }
+  .card__discipline {
+    left: 10.684%;
+  }
+  .card__industry {
+    left: 10.684%;
+  }
+  .card__conteiner-statics {
+    left: initial;
+    right: 7.789%;
+    top: 71.113%;
+  }
+  .card-info-statics {
+    font-size: 0.68rem;
+    letter-spacing: 4%;
+    margin-right: 0.527rem;
+  }
+  .card__name {
+    transform: translate(-50%, 5%);
+    font-size: 1.415rem;
+  }
+  .card-fragment-black-medium {
+    top: 15.875%;
+    right: 9.72%;
+  }
+  .card-characters__effect-top {
+    top: -18%;
+    right: -52.5%;
+  }
+  .card__statics {
+    margin-right: 0.527rem;
+  }
+  .card-content-two__level {
+    top: 10.5%;
+  }
+}/*# sourceMappingURL=card.css.map */

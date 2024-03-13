@@ -1,0 +1,86 @@
+.contacts {
+  width: 100%;
+  background-color: #00010f;
+}
+
+.contacts__content {
+  margin-top: 11.722rem;
+  margin-bottom: 27.0555rem;
+}
+
+.contacts__effect {
+  position: absolute;
+  top: 18.4%;
+  left: 24.791%;
+}
+
+.contacts__title {
+  margin-bottom: 2.7777rem;
+}
+
+.contacts__text {
+  margin-bottom: 0.833rem;
+  font-size: 0.8888rem;
+  line-height: 1.422rem;
+  color: #a2a2b9;
+  font-style: normal;
+}
+
+.contacts__link {
+  display: inline-block;
+  line-height: 1.44em;
+  font-weight: 500;
+  color: #fff;
+  font-style: normal;
+  margin-bottom: 1.9444rem;
+}
+
+.contacts__body-social-media {
+  display: flex;
+}
+.contacts__body-social-media a {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 5px;
+}
+.contacts__body-social-media a svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 60em) {
+  .contacts__content {
+    margin-top: 10.6111rem;
+    margin-bottom: 17.88rem;
+  }
+  .contacts__effect {
+    position: absolute;
+    top: 21.375%;
+    left: 21.365%;
+  }
+}
+@media (max-width: 40em) {
+  .contacts__effect {
+    position: absolute;
+    top: 19.75%;
+    left: 11.562%;
+  }
+}
+@media (max-width: 22.5em) {
+  .contacts__content {
+    margin-bottom: 21.5555rem;
+  }
+  .contacts__text {
+    margin-bottom: 0.2777rem;
+    font-size: 0.777rem;
+    line-height: 1.244rem;
+  }
+  .contacts__link {
+    margin-bottom: 1.388rem;
+  }
+  .contacts__effect {
+    position: absolute;
+    top: 19.75%;
+    left: 11.562%;
+  }
+}/*# sourceMappingURL=contacts.css.map */

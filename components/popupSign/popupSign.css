@@ -1,0 +1,102 @@
+.popup-sign {
+  display: flex;
+  align-items: center;
+}
+
+.popup-sign__container {
+  max-width: 51.111rem;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.777rem 1.388rem;
+  border-radius: 2.777rem;
+  background-color: rgb(39, 41, 55);
+  position: relative;
+}
+
+.popup-sign__content {
+  width: 294px;
+  height: 100%;
+  position: static;
+}
+
+.form-sign__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-sign__text {
+  margin-bottom: 0.8333rem;
+  text-align: center;
+}
+
+.form-sign__password-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-sign__forgot-password {
+  align-self: flex-end;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+.form-sign__question-pc {
+  margin-bottom: 1.388rem;
+}
+
+.form-sign__button {
+  align-self: center;
+  margin-bottom: 0.8333rem;
+}
+
+.form-sign__question {
+  display: flex;
+  justify-content: center;
+}
+.form-sign__question .form-sign__text {
+  margin-right: 5px;
+}
+.form-sign__question button {
+  background-color: transparent;
+  color: rgb(240, 68, 81);
+}
+
+.form-sign__custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+@media (max-width: 22.5em) {
+  .popup-sign__container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+  }
+  .popup-sign__content {
+    width: 100%;
+    height: 100%;
+    position: static;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .popup-sign__sign {
+    width: 100%;
+  }
+  .popup-sing__form-sing {
+    width: 100%;
+  }
+  .popup-sing__choose {
+    width: 100%;
+  }
+  .form-sign__button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=popupSign.css.map */

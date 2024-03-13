@@ -1,0 +1,66 @@
+@media (max-width: 60em) {
+  .gratitude__content {
+    margin-bottom: 9.222rem;
+  }
+  .gratitude__subtitle {
+    margin-bottom: 4.166rem;
+  }
+  .gratitude__body-gratitude-table {
+    margin-bottom: 4.166rem;
+  }
+  .gratitude__body-gratitude-table .slick-prev {
+    margin-left: 0%;
+  }
+  .gratitude__people {
+    padding-left: 0.555rem;
+    left: -3.72%;
+  }
+}
+@media (max-width: 40em) {
+  .gratitude__people {
+    padding-left: 0rem;
+    left: -8.33333%;
+  }
+  .gratitude__body-gratitude-table .slick-prev {
+    margin-left: 41px;
+  }
+  .gratitude__body-gratitude-table .slick-next {
+    transform: translate(-55px, 0px);
+  }
+}
+@media (max-width: 22.5em) {
+  .gratitude-table__list {
+    max-width: 10.6111rem;
+    min-width: 10.611rem;
+  }
+  .gratitude__people {
+    left: 0%;
+  }
+  .gratitude__people .slick-list {
+    display: flex;
+    justify-content: center;
+  }
+  .gratitude__text {
+    font-size: 0.777rem;
+    line-height: 1.244rem;
+  }
+  .question-helps__title {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .gratitude__content {
+    margin-top: 8.388rem;
+    margin-bottom: 6.944rem;
+  }
+  .gratitude__subtitle {
+    margin-bottom: 2.77rem;
+  }
+  .gratitude__body-gratitude-table {
+    margin-bottom: 2.77rem;
+  }
+  .gratitude-table__list {
+    max-width: 14.166rem;
+    margin: 0rem 3.66rem;
+    transform: translate(-25%, 0%);
+  }
+}/*# sourceMappingURL=gratitudeMedia.css.map */

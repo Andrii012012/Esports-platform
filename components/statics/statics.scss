@@ -1,0 +1,212 @@
+@import "../../utils/mixin.scss";
+@import "../../utils//animation.scss";
+
+.statics {
+  width: 100%;
+  background-color: rgba(9, 11, 25, 1);
+  position: relative;
+}
+
+.statics__content {
+  margin-top: 14.2rem;
+  margin-bottom: 5.888rem;
+  min-height: 31rem;
+  position: relative;
+}
+
+.statics__content {
+  display: flex;
+}
+
+.statics__container {
+  padding: 0rem 2.22rem;
+}
+
+.statics__body {
+  width: 100%;
+  min-height: 100%;
+}
+
+.statics__fragments-info {
+  width: 100%;
+  min-height: 100%;
+}
+
+.statics__img {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    @include adaptive-size(524, 386);
+    object-fit: cover;
+    animation-name: animationRound;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+    animation-fill-mode: none;
+  }
+}
+
+//fragments
+
+.statics__fragment {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 100%;
+  img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.statics__item {
+  position: absolute;
+  color: #fff;
+  z-index: 3;
+  &::after {
+    content: "";
+    display: block;
+    background-color: rgba(240, 68, 81, 1);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 15px;
+    animation-name: animationBreath;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.statics__quantity {
+  font-size: 3.555rem;
+  margin-bottom: 0.833rem;
+  font-weight: 100;
+  line-height: 3.12rem;
+}
+
+.statics__text {
+  font-size: 1rem;
+  opacity: 0.75;
+  line-height: 1.5rem;
+}
+
+//fragments
+
+.statics__fragment-black-big {
+  position: absolute;
+  top: 89.3%;
+  left: 68.02%;
+}
+
+.statics__fragment-white-big {
+  position: absolute;
+  top: 73.9%;
+  left: 4.16%;
+}
+
+.statics__fragment-black-medium {
+  position: absolute;
+  top: 13.3%;
+  left: 11.82%;
+}
+
+.statics__fragment-black-medium-two {
+  position: absolute;
+  top: 12.2%;
+  left: 65.52%;
+}
+
+.statics__fragment-white-medium {
+  position: absolute;
+  top: 4.85%;
+  left: 92.812%;
+}
+
+//effects
+
+.statics__effect-top {
+  position: absolute;
+  top: 10.9%;
+  left: 16.041%;
+}
+
+.statics__effect-bottom {
+  position: absolute;
+  bottom: -7.4%;
+  left: 48.07%;
+}
+
+//fragments rounds for background of section
+
+.statics__img-fragment1 {
+  position: absolute;
+  left: 50.937%;
+  max-width: 100%;
+  min-height: 100%;
+}
+.statics__img-fragment2 {
+  position: absolute;
+  left: 38.958%;
+  max-width: 100%;
+  min-height: 100%;
+}
+.statics__img-fragment3 {
+  position: absolute;
+  left: 26.9791%;
+  max-width: 100%;
+  min-height: 100%;
+}
+.statics__img-fragment4 {
+  position: absolute;
+  left: 15%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+//blocks text
+
+.statics__users {
+  position: absolute;
+  top: 27.2%;
+  left: 51.15%;
+  &::after{
+    animation-duration: 6s;
+  }
+}
+
+.statics__prize {
+  position: absolute;
+  top: 69.7%;
+  left: 42.525%;
+  &::after{
+    animation-duration: 5s;
+  }
+}
+
+.statics__match {
+  position: absolute;
+  top: 25.6%;
+  left: 27.2%;
+  &::after {
+    animation-duration: 4s;
+  }
+}
+
+.statics__tournament {
+  position: absolute;
+  top: 46.6%;
+  left: 14.8%;
+  &::after{
+    animation-duration: 3s;
+  }
+}
+
+
+//media style
+
+@import './staticsMedia.scss';

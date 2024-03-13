@@ -1,0 +1,36 @@
+@media (max-width: 60em) {
+  .contacts__content {
+    margin-top: 10.6111rem;
+    margin-bottom: 17.88rem;
+  }
+  .contacts__effect {
+    position: absolute;
+    top: 21.375%;
+    left: 21.365%;
+  }
+}
+@media (max-width: 40em) {
+  .contacts__effect {
+    position: absolute;
+    top: 19.75%;
+    left: 11.562%;
+  }
+}
+@media (max-width: 22.5em) {
+  .contacts__content {
+    margin-bottom: 21.5555rem;
+  }
+  .contacts__text {
+    margin-bottom: 0.2777rem;
+    font-size: 0.777rem;
+    line-height: 1.244rem;
+  }
+  .contacts__link {
+    margin-bottom: 1.388rem;
+  }
+  .contacts__effect {
+    position: absolute;
+    top: 19.75%;
+    left: 11.562%;
+  }
+}/*# sourceMappingURL=contactsMedia.css.map */

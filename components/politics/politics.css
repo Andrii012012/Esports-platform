@@ -1,0 +1,36 @@
+.politics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.politics__title {
+  margin-bottom: 5px;
+}
+
+.politics__info-edit {
+  margin-bottom: 2.77rem;
+  opacity: 0.5;
+}
+
+.politics__info-terms {
+  font-weight: 700;
+  color: #fff;
+}
+
+.politics__terms p {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.politics__terms {
+  margin-bottom: 2.77rem;
+}
+
+.politics__close {
+  position: fixed;
+}
+
+.politics__info-polititcs {
+  margin-bottom: 2.77rem;
+}/*# sourceMappingURL=politics.css.map */

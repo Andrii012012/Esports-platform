@@ -1,0 +1,282 @@
+.game {
+  background-color: rgb(39, 41, 55);
+  width: 100%;
+  padding-bottom: 3.072%;
+}
+
+.game__container-blocks {
+  display: flex;
+  position: relative;
+  margin-bottom: 17.4%;
+}
+
+.game__content {
+  display: flex;
+  width: 100%;
+  margin-top: 14.33rem;
+  margin-bottom: 9.5rem;
+  position: relative;
+}
+
+.game__title {
+  font-size: 3.55rem;
+  font-family: "Raleway";
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  margin-bottom: 0.39rem;
+}
+
+.game__sport {
+  font-size: 1rem;
+  line-height: 1.5em;
+  opacity: 0.5;
+  color: #fff;
+  margin-bottom: 0.83rem;
+}
+
+.game__items {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.game__item {
+  margin-bottom: 0.555em;
+}
+
+.game__block-info {
+  flex: 0 0 50%;
+  position: relative;
+  z-index: 5;
+}
+
+.game__block-img {
+  flex: 1 0 70.04%;
+  margin-top: -35%;
+}
+.game__block-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 87.84%;
+  width: 100%;
+  position: relative;
+  transform: translate(1.9%, 37%);
+}
+
+.game__btn-join {
+  margin-right: 0.83rem;
+}
+
+.game__item {
+  margin-right: 1.38rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.game__item:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #f04451;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.game__container-scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.game__effect-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: -75%;
+  left: -75%;
+}
+
+.game__effect-bottom {
+  position: absolute;
+  mix-blend-mode: lighten;
+  box-shadow: inset 0px -128px 113px rgba(0, 0, 0, 0);
+  top: -11.1%;
+  right: -14.6%;
+  z-index: -1;
+}
+
+.game__fragment-black-big {
+  position: absolute;
+  top: 17.1%;
+  left: 7.36%;
+  z-index: 0;
+}
+
+.game__fragment-white-big {
+  position: absolute;
+  bottom: 3.4%;
+  left: 6.614%;
+  z-index: 0;
+}
+
+.game__fragment-black-medium {
+  position: absolute;
+  bottom: 13.5%;
+  left: 39.58%;
+  z-index: 0;
+}
+
+.game__fragment-black-small {
+  position: absolute;
+  top: 20.4%;
+  right: 5.218%;
+  z-index: 0;
+}
+
+.game__effect-top {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.game__effect-center {
+  position: absolute;
+  top: 30.7%;
+  right: 14.63%;
+  z-index: 0;
+}
+
+@media (max-width: 60em) {
+  .game__items {
+    flex-direction: column;
+  }
+  .game__content {
+    margin-top: 8.55rem;
+    margin-bottom: 7.38rem;
+  }
+  .game__block-img img {
+    position: relative;
+    width: 83.34%;
+    height: 64.25%;
+    height: 514px;
+    transform: translate(-40px, -11px);
+  }
+  .game__block-info {
+    flex: 1 1 initial;
+    padding-right: 43px;
+  }
+  .game__block-img {
+    margin-top: 0%;
+  }
+  .game__effect-bottom {
+    position: static;
+  }
+  .game__title {
+    font-size: 2rem;
+  }
+  .game__fragment-black-big {
+    top: initial;
+    bottom: 24px;
+    left: 4.58%;
+  }
+  .game__fragment-white-big {
+    display: none;
+  }
+  .game__fragment-black-medium {
+    top: initial;
+    left: 45.83%;
+    bottom: 8.375%;
+  }
+  .game__fragment-black-small {
+    top: initial;
+    top: 38%;
+    right: 2.239%;
+  }
+  .game__effect-center {
+    top: initial;
+    bottom: -10.875%;
+    right: 6.77%;
+  }
+}
+@media (max-width: 40em) {
+  .game__block-img {
+    position: absolute;
+    width: 100%;
+    top: 27.38%;
+  }
+  .game__block-img img {
+    position: static;
+    transform: translate(40%, 0px);
+  }
+  .game__content {
+    margin-bottom: 8.2222rem;
+    margin-top: 8.94rem;
+    flex-wrap: wrap;
+  }
+  .game__title {
+    margin-bottom: 1.38rem;
+  }
+  .game__fragment-black-big {
+    bottom: 0;
+  }
+  .game__fragment-black-medium {
+    display: none;
+  }
+  .game__fragment-black-small {
+    top: 30.212%;
+    right: 3.75%;
+    transform: rotate(-25deg);
+  }
+  .game__effect-center {
+    bottom: 6.875%;
+    right: -12.968%;
+  }
+}
+@media (max-width: 22.5em) {
+  .container-btns {
+    flex-direction: column;
+  }
+  .game__btn-join {
+    margin: 0rem 0rem 0.83rem 0rem;
+  }
+  .game__content {
+    flex-direction: column;
+    padding-right: 0px;
+  }
+  .game__container-btns {
+    display: contents;
+  }
+  .game__items {
+    margin-bottom: 1.38rem;
+  }
+  .game__content {
+    margin-top: 8.38rem;
+    margin-bottom: 9.88rem;
+  }
+  .game__block-img {
+    top: 41.075%;
+  }
+  .game__fragment-black-small {
+    display: none;
+  }
+  .game__fragment-black-big {
+    bottom: 5.4125%;
+    left: 8.33%;
+  }
+  .game__effect-center {
+    bottom: -18.25%;
+    right: -45.83%;
+  }
+  .game__title {
+    font-size: 1.333rem;
+  }
+  .game__sport {
+    font-size: 0.777rem;
+  }
+}/*# sourceMappingURL=game.css.map */

@@ -1,0 +1,134 @@
+
+@import "../../utils/mixin.scss";
+
+.advantages {
+  width: 100%;
+  height: auto;
+  background-color: rgba(29, 31, 45, 1);
+}
+
+.advantages__container {
+  margin-top: 12.5rem;
+  margin-bottom: 7.166rem;
+}
+
+.useful-info__title {
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+}
+
+.useful-info__title_changed {
+  line-height: 1.3em;
+}
+
+.advantages__title {
+  margin-bottom: 1.08em;
+}
+
+.useful-info__block-info-top {
+  display: grid;
+  grid-template-columns: 24.53% minmax(13%, 28.25%) 24.53% minmax(13%, 28.25%);
+  width: 100%;
+  margin-bottom: 2.38rem;
+}
+
+.useful-info__block-info-bottom {
+  display: grid;
+  grid-template-columns: minmax(13%, 28.25%) 24.53% minmax(13%, 28.25%) 24.53%;
+  width: 100%;
+}
+
+.advantages__content {
+  position: relative;
+}
+
+.useful-info__item {
+  padding: 10px 10px 0px 10px;
+}
+
+.useful-info__icon {
+  margin-bottom: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+//fragments
+
+.advantages__fragment-medium{
+  display: none;
+  position: absolute;
+}
+
+.advantages__fragment-black-big {
+  position: absolute;
+  bottom: 22.4%;
+  left: 7.5%;
+  z-index: 0;
+}
+
+.advantages__fragment-white-big {
+  position: absolute;
+  top: 77.6%;
+  left: 51.97%;
+}
+
+.advantages__fragment-black-small {
+  position: absolute;
+  top: 31.9%;
+  left: 9.5833%;
+  transform: translate(0%, -100%);
+}
+
+.advantages__fragment-white-small {
+  position: absolute;
+  top: 12.5%;
+  right: 39.63%;
+  transform: translate(-100%, 0%);
+}
+
+.advantages__fragment-black-medium {
+  position: absolute;
+  top: 27.8%;
+  right: 10.05%;
+}
+
+.advantages__effect-top {
+  position: absolute;
+  top: 11.7%;
+  right: 14.16%;
+}
+
+.advantages__effect-bottom {
+  position: absolute;
+  bottom: 12.7%;
+  left: 15.989%;
+}
+
+//arrows
+
+.useful-info__arrow-get-community {
+  transform: translate(6.578%, 31.694%);
+}
+
+.useful-info__arrow-top-users-two {
+  transform: translate(-77.431%, 39.4%);
+  justify-self: flex-end;
+}
+
+.useful-info__arrow-top-users {
+  transform: translate(5%, 31.694%);
+}
+
+.useful-info__arrow-use-opportunity {
+  transform: translate(9.3949%, 16.536%);
+}
+
+.advantages__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+//media style 
+ 
+@import './advantagesMedia.scss';

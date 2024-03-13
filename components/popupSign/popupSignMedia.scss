@@ -1,0 +1,30 @@
+// 360px
+
+@media (max-width: 22.5em) {
+    .popup-sign__container {
+      width: 100%;
+      height: 100%;
+      border-radius: 0rem;
+    }
+    .popup-sign__content {
+      width: 100%;
+      height: 100%;
+      position: static;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .popup-sign__sign {
+      width: 100%;
+    }
+    .popup-sing__form-sing {
+      width: 100%;
+    }
+    .popup-sing__choose {
+      width: 100%;
+    }
+    .form-sign__button {
+      width: 100%;
+    }   
+  }

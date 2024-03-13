@@ -1,0 +1,149 @@
+@media (max-width: 60em) {
+  .card-characters__container {
+    margin-top: 8.11rem;
+  }
+  .swiper-slide {
+    width: 280px;
+    height: 413px;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 4.22rem;
+  }
+  .card {
+    padding: 0.5rem 0rem;
+  }
+  .card-fragment-black-small,
+  .card-fragment-white-big,
+  .card-fragment-black-big,
+  .card-fragment-white-medium,
+  .card-characters__effect-bottom {
+    display: none;
+  }
+  .card-fragment-black-medium {
+    top: 22.62%;
+    right: 5.208%;
+  }
+  .card-characters__effect-top {
+    top: -19%;
+    right: -16.875%;
+  }
+}
+@media (max-width: 40em) {
+  .card__container-card {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0.563);
+  }
+  .card-characters__container {
+    margin-top: 7.555rem;
+  }
+  .card {
+    margin-bottom: 1.38rem;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 3.27rem;
+  }
+  .card-fragment-black-medium {
+    top: 19.875%;
+    right: 8.281%;
+  }
+  .card-characters__effect-top {
+    top: -18.75%;
+    right: -28.43%;
+  }
+  .card__icon-info {
+    bottom: 3.51%;
+    right: 24.16%;
+  }
+}
+@media (max-width: 22.5em) {
+  .card__popup-description {
+    font-size: 0.777rem;
+  }
+  .card-characters__container {
+    margin-top: 6.166rem;
+  }
+  .card-characters__subtitle {
+    margin-bottom: 3.5rem;
+  }
+  .swiper-slide-active .card__container-card {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide-active .card__card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 190px !important;
+    height: 281px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .card__container-card {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0.523);
+    height: 269.98px;
+    filter: blur(3px);
+  }
+  .card__arrow {
+    display: none;
+  }
+  .card__info-card {
+    width: 25.58px;
+    height: 25.58px;
+  }
+  .card {
+    padding: 4.166rem 0rem;
+  }
+  .card__icon-info {
+    bottom: 0%;
+    right: 0.833rem;
+  }
+  .card__icon-swipe {
+    display: block;
+    cursor: pointer;
+    bottom: 0;
+    left: 0.55rem;
+  }
+  .card__level {
+    top: 12.37%;
+    font-size: 1.416rem;
+  }
+  .card__discipline {
+    left: 10.684%;
+  }
+  .card__industry {
+    left: 10.684%;
+  }
+  .card__conteiner-statics {
+    left: initial;
+    right: 7.789%;
+    top: 71.113%;
+  }
+  .card-info-statics {
+    font-size: 0.68rem;
+    letter-spacing: 4%;
+    margin-right: 0.527rem;
+  }
+  .card__name {
+    transform: translate(-50%, 5%);
+    font-size: 1.415rem;
+  }
+  .card-fragment-black-medium {
+    top: 15.875%;
+    right: 9.72%;
+  }
+  .card-characters__effect-top {
+    top: -18%;
+    right: -52.5%;
+  }
+  .card__statics {
+    margin-right: 0.527rem;
+  }
+  .card-content-two__level {
+    top: 10.5%;
+  }
+}/*# sourceMappingURL=cardMedia.css.map */

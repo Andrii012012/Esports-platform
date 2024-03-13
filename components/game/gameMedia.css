@@ -1,0 +1,128 @@
+@media (max-width: 60em) {
+  .game__items {
+    flex-direction: column;
+  }
+  .game__content {
+    margin-top: 8.55rem;
+    margin-bottom: 7.38rem;
+  }
+  .game__block-img img {
+    position: relative;
+    width: 83.34%;
+    height: 64.25%;
+    height: 514px;
+    transform: translate(-40px, -11px);
+  }
+  .game__block-info {
+    flex: 1 1 initial;
+    padding-right: 43px;
+  }
+  .game__block-img {
+    margin-top: 0%;
+  }
+  .game__effect-bottom {
+    position: static;
+  }
+  .game__title {
+    font-size: 2rem;
+  }
+  .game__fragment-black-big {
+    top: initial;
+    bottom: 24px;
+    left: 4.58%;
+  }
+  .game__fragment-white-big {
+    display: none;
+  }
+  .game__fragment-black-medium {
+    top: initial;
+    left: 45.83%;
+    bottom: 8.375%;
+  }
+  .game__fragment-black-small {
+    top: initial;
+    top: 38%;
+    right: 2.239%;
+  }
+  .game__effect-center {
+    top: initial;
+    bottom: -10.875%;
+    right: 6.77%;
+  }
+}
+@media (max-width: 40em) {
+  .game__block-img {
+    position: absolute;
+    width: 100%;
+    top: 27.38%;
+  }
+  .game__block-img img {
+    position: static;
+    transform: translate(40%, 0px);
+  }
+  .game__content {
+    margin-bottom: 8.2222rem;
+    margin-top: 8.94rem;
+    flex-wrap: wrap;
+  }
+  .game__title {
+    margin-bottom: 1.38rem;
+  }
+  .game__fragment-black-big {
+    bottom: 0;
+  }
+  .game__fragment-black-medium {
+    display: none;
+  }
+  .game__fragment-black-small {
+    top: 30.212%;
+    right: 3.75%;
+    transform: rotate(-25deg);
+  }
+  .game__effect-center {
+    bottom: 6.875%;
+    right: -12.968%;
+  }
+}
+@media (max-width: 22.5em) {
+  .container-btns {
+    flex-direction: column;
+  }
+  .game__btn-join {
+    margin: 0rem 0rem 0.83rem 0rem;
+  }
+  .game__content {
+    flex-direction: column;
+    padding-right: 0px;
+  }
+  .game__container-btns {
+    display: contents;
+  }
+  .game__items {
+    margin-bottom: 1.38rem;
+  }
+  .game__content {
+    margin-top: 8.38rem;
+    margin-bottom: 9.88rem;
+  }
+  .game__block-img {
+    top: 41.075%;
+  }
+  .game__fragment-black-small {
+    display: none;
+  }
+  .game__fragment-black-big {
+    bottom: 5.4125%;
+    left: 8.33%;
+  }
+  .game__effect-center {
+    bottom: -18.25%;
+    right: -45.83%;
+  }
+  .game__title {
+    font-size: 1.333rem;
+  }
+  .game__sport {
+    font-size: 0.777rem;
+  }
+}/*# sourceMappingURL=gameMedia.css.map */

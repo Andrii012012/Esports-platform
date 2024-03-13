@@ -1,0 +1,80 @@
+//960px
+
+@media (max-width: 60em) {
+  .container-info {
+    display: none;
+  }
+  .page .slick-dots {
+    display: none !important;
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .massage-confirmation__title {
+    font-size: 1rem;
+  }
+  .text-about {
+    font-size: 0.777rem;
+  }
+}
+
+// 640px
+
+@media (max-width: 40em) {
+  .container-wrapper {
+    padding: 0rem 1.1rem;
+  }
+  .popup-card__container {
+    padding: 0rem 1.1rem;
+  }
+  .massage-confirmation {
+    width: 90%;
+    padding: 1.388rem 1.388rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .text-info {
+    font-size: 0.77rem;
+  }
+  .title-list {
+    font-size: 0.88rem;
+  }
+}
+
+// 360px
+
+@media (max-width: 22.5em) {
+  .title {
+    font-size: 1.333rem;
+    line-height: 2rem;
+  }
+  .text-info {
+    line-height: 1.0888rem;
+  }
+  .popup-card__info {
+    font-size: 0.77rem;
+  }
+  .popup__close {
+    right: 25px;
+  }
+  .massage-confirmation__title {
+    font-size: 0.77rem;
+  }
+  .massage-confirmation__subtitle {
+    font-size: 0.666rem;
+  }
+  .popup__container {
+    transform: translate(0%, 0%);
+  }
+  .title {
+    line-height: 1.4666rem;
+  }
+  .info-point {
+    font-size: 0.777rem;
+  }
+  .paragraph-title {
+    font-size: 1rem;
+  }
+}

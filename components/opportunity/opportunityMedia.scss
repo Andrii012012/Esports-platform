@@ -1,0 +1,140 @@
+
+//960
+
+@media (max-width: 60em){
+    .opportunity__containter {
+        margin-top: 8.944rem;
+    }
+    .opportunity__cards .opportunity-card__item{
+        min-width: 14.16rem;
+    }
+    
+    .opportunity__containter-title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .opportunity__title {
+        max-width: 21.44rem;
+        margin-bottom: 0px;
+    }
+    .opportunity__effect-top {
+        position: absolute;
+        top: 0%;
+        left: -20.625%;
+        z-index: 0;
+    }
+    .opportunity__effect-bottom {
+        position: absolute;
+        bottom: -21.375%;
+        right: -13.33%;
+        z-index: 0;
+    }
+    .opportunity__fragment-white-big,
+    .opportunity__fragment-black-small{
+        display: none;
+    }
+    .opportunity__fragment-black-medium-two{
+        display: block;
+        top: 83.375%;
+        left: 82.916%;
+    }
+    .opportunity__fragment-black-big{
+        top: 21.5%;
+        right: 8.125%;
+    }
+    .opportunity__fragment-black-medium{
+        top: 82%;
+        left: 17.5%;
+        transform: translate(0%, 0%);
+    }
+    .opportunity__containter-title{
+        margin-bottom: 1.388rem;
+        padding-right: 1.111rem;
+    }
+    .opportunity__containter{
+        padding-right: 0px;
+    }
+    .opportunity__content{
+        margin-bottom: 7.55rem;
+    }
+    .opportunity-card__item {
+        margin-right: 1.38rem;
+    }
+}
+
+
+
+//640px
+
+@media (max-width: 40em){
+    .opportunity__containter {
+        margin-top: 10.22rem;
+    }
+    .opportunity-card__item {
+        margin-right: 0.833rem;
+    }
+    .opportunity__content{
+        margin-bottom: 6.44rem;
+    }
+    .opportunity__effect-top {
+        top: -23.5%;
+        left: -22.347%;
+    }
+    .opportunity__effect-bottom {
+        bottom: -13.25%;
+        right: -17.031%;
+    }
+    .opportunity__fragment-black-big{
+        top: 16.325%;
+        right: 5.007%;
+    }
+    .opportunity__fragment-black-medium{
+        top: 86.25%;
+        left: 10%;
+    }
+    .opportunity__fragment-black-medium-two{
+        top: 70.125%;
+        left: 81.406%;
+        z-index: 5;
+    }
+}
+
+@media (max-width: 22.5em){
+    .opportunity__containter {
+        margin-top: 10.611rem;
+    }
+    .opportunity__content{
+        margin-bottom: 7.88rem;
+    }
+    .card-info__text {
+        font-size: 0.77rem;
+    }
+    .card-info__title{
+        font-size: 1rem;
+    }
+    .opportunity__effect-top {
+        top: -9.125%;
+        left: -44.166%;
+    }
+    .opportunity__effect-bottom {
+        bottom: -35%;
+        right: -47.77%;
+    }
+    .opportunity__fragment-black-big{
+        top: 85%;
+        right: 64.58%;
+    }
+    .opportunity__fragment-black-medium{
+        display: none;
+    }
+    .opportunity__fragment-black-medium-two{
+        top: 16.66%;
+        right: initial;
+        left: 71.66%;
+        transform: translate(0%, 0%)
+    }
+    .opportunity__title {
+        max-width: 14.5rem;
+    }
+}

@@ -1,0 +1,69 @@
+.popup-register__container {
+  max-width: 51.11rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(39, 41, 55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.777rem;
+  padding: 2.777rem 0rem 2.777rem 0rem;
+  position: relative;
+}
+
+.popup-register__content {
+  max-width: 17.333rem;
+  width: 100%;
+}
+
+.popup-register__text {
+  margin-bottom: 0.8333rem;
+}
+
+.popup-register__sign {
+  margin-bottom: 1.66rem;
+}
+
+.form-register__repeat-password-body {
+  margin-bottom: 1.66rem;
+}
+
+.form-register__question-rule {
+  margin-bottom: 1.3888rem;
+}
+
+.form-register__text strong {
+  color: rgb(240, 68, 81);
+  font-weight: normal;
+}
+
+.form-register__button {
+  margin-bottom: 0.833rem;
+}
+
+.form-register__custom-checkbox {
+  margin-right: 22px;
+  align-self: flex-start;
+}
+
+.form-register__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-register__button {
+  align-self: center;
+}
+
+.form-register__button {
+  width: 100%;
+}
+
+@media (max-width: 22.5em) {
+  .popup-register__container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+  }
+}/*# sourceMappingURL=popupRegister.css.map */

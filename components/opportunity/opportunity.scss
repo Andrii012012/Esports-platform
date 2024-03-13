@@ -1,0 +1,284 @@
+
+.opportunity{
+    width: 100%;
+    height: auto;
+    background-color: rgba(24, 26, 40, 1);
+    font-family: 'Raleway';
+}
+
+.opportunity__containter{
+    margin-top: 14.21%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.opportunity__content{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 9.611rem;
+}
+
+.opportunity__title{
+    text-align: center;
+    font-weight: 600;
+}
+
+.opportunity__containter-title{
+    margin-bottom: 1.94rem;
+}
+
+.opportunity__cards{
+    display: flex;
+    justify-content: center;
+}
+
+.opportunity-card__item{
+    margin-right: 1.94rem;
+    min-height: 20.5rem;
+}
+
+.opportunity-card__item:last-child{
+    margin-right: 0rem;
+}
+
+
+.opportunity-card__item{
+    height: auto;
+    background-color: #181528;
+    border-radius: 0.8rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 14.16rem;
+     &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: url('../../img/opportunity/card-info-effect-top.png') top left;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+     }
+     &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: url('../../img/opportunity/card-info-effect-bottom.png') bottom right;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+     }
+}
+
+.card-info__title{
+    font-size: 1.222rem;
+    margin-bottom: 1.59em;
+    width: 100%;
+    line-height: 2rem;
+    color: #fff;
+    margin-top: 1.55rem;
+    font-weight: 600;
+}
+
+.card-info__icon{
+    margin-bottom: 1.3rem;
+}
+
+
+.card-info .slick-list{
+   overflow: hidden;
+}
+
+.card-info{
+    position: relative;
+    z-index: 2;
+    max-width: 255px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+
+
+.card-info__text{
+    width: 10.77rem;
+    font-size: 0.88rem;
+    line-height: 1.6em;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.opportunity-card__fon img{
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+}
+
+
+//fragments
+
+.opportunity__fragment-black-small{
+    position: absolute;
+    top: 14.8%;
+    left: 19.166%;
+    z-index: 0;
+    transform: translate(-50%, 0%);
+}
+
+.opportunity__fragment-black-medium{
+    position: absolute;
+    bottom: 13.4%;
+    left: 10.156%;
+    z-index: 0;
+    transform: translate(50%, 50%);
+}
+
+.opportunity__fragment-black-big{
+    position: absolute;
+    top: 60.4%;
+    right: 7.55%;
+    z-index: 0;
+}
+
+.opportunity__fragment-white-big{
+    position: absolute;
+    top: 16.8%;
+    right: 9.53%;
+    z-index: 0;
+}
+
+.opportunity__fragment-white-small{
+    position: absolute;
+    top: 49.4%;
+    left: 7.16%;
+    z-index: 0;
+    transform: translate(50%, 50%);
+}
+
+.opportunity__fragment-black-medium-two{
+    display: none;
+    position: absolute;
+}
+
+//effect 
+
+.opportunity__effect-top{
+    position: absolute;
+    top: 7%;
+    left: 19.16%;
+    z-index: 0;
+}
+
+.opportunity__effect-bottom{
+    position: absolute;
+    bottom: -12.6%;
+    right: 10.41%;
+    z-index: 0;
+}
+
+//swiper
+
+
+.card-info .slick-track{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.opportunity-card__item .slick-prev{
+    font-size: 0;
+     background: url('../../img/opportunity/card-arrow-l.svg');
+     background-repeat: no-repeat;
+     width: 43px;
+     height: 43px;
+     position: absolute;
+     top: 7.2rem;
+     left: 11.2px;
+}
+
+.opportunity-card__item .slick-next{
+     font-size: 0;
+     background: url('../../img/opportunity/card-arrow-r.svg');
+     background-repeat: no-repeat;
+     width: 43px;
+     height: 43px;
+     position: absolute;
+     top: 7.2rem;
+     right: -11.2px;
+}
+
+.opportunity-card__item .slick-dots{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+    top: initial;
+    bottom: -3.6rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.opportunity-card__item .slick-dots li button{
+    width: 8px;
+    height: 8px;
+    background-color:#3B355B;
+    margin-right: 4px;
+    font-size: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+//background bullets for every cards
+
+.opportunity-card__users .slick-dots .slick-active button{
+    background-color:#FF4654;
+}
+
+.opportunity-card-organizations .slick-dots .slick-active button{
+    background-color:#FABC45
+}
+.opportunity-card__teams  .slick-dots .slick-active button{
+    background-color:#2EA69F
+}
+.opportunity-card__arens .slick-dots .slick-active button{
+    background-color:#33C0FB;
+}
+
+.opportunity-card__item .slick-dots li:last-child button{
+    margin-right: 0px;
+}
+
+
+//slick
+
+.opportunity__cards .slick-track{
+    display: flex;
+    flex-direction: row;
+}
+
+.opportunity__cards .opportunity-card__item{
+    max-width: 14.16rem;
+}
+
+.opportunity__cards .slick-dots{
+    display: flex !important;
+}
+
+
+//media style
+
+@import './opportunityMedia.scss';

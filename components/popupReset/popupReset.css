@@ -1,0 +1,33 @@
+.form-reset__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-reset__content {
+  max-width: 16.333rem;
+  width: 100%;
+  position: relative;
+}
+
+.popup-reset__title {
+  margin-bottom: 5px;
+  opacity: 1;
+}
+
+.popup-reset__info {
+  margin-bottom: 1.3888rem;
+  opacity: 0.75;
+}
+
+.form-reset__email-body {
+  margin-bottom: 1.94rem;
+}
+
+@media (max-width: 22.5em) {
+  .popup-reset__container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+  }
+}/*# sourceMappingURL=popupReset.css.map */

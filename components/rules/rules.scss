@@ -1,0 +1,19 @@
+.rules {
+  color: #fff;
+}
+
+.rules__close {
+  position: fixed;
+}
+
+.rules__title {
+  margin-bottom: 2.77rem;
+}
+
+.rules__info{
+  margin-bottom: 2.77rem;
+}
+
+
+//media styles
+@import './rulesMedia.scss';
