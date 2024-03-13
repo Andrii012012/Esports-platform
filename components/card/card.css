@@ -149,7 +149,6 @@
   left: 50%;
   top: -15px;
   opacity: 0;
-  white-space: nowrap;
   visibility: hidden;
   transform: translate(-50%, -100%);
   display: none;

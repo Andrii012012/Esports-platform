@@ -237,6 +237,9 @@
     bottom: 6.875%;
     right: -12.968%;
   }
+  .game__items {
+    margin-bottom: 1.38rem;
+  }
 }
 @media (max-width: 22.5em) {
   .container-btns {
@@ -251,9 +254,6 @@
   }
   .game__container-btns {
     display: contents;
-  }
-  .game__items {
-    margin-bottom: 1.38rem;
   }
   .game__content {
     margin-top: 8.38rem;
