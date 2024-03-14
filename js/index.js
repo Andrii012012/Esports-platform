@@ -22,13 +22,7 @@ if (innerWidth < 961) {
 }
 
 function slickSlideMobile() {
-  const slides = [
-    "footer",
-    "advantages",
-    "support",
-    "contacts",
-    "gratitude",
-  ];
+  const slides = ["footer", "advantages", "support", "contacts", "gratitude"];
   const slideParent = scrollFullScroll[0].slick.$slides;
   const slideLength = scrollFullScroll[0].slick.$slides.length;
   for (let index = 0; index < slideLength; index++) {
@@ -38,7 +32,6 @@ function slickSlideMobile() {
   }
   scrollFullScroll.slick("slickRemove", 3);
 }
-
 
 // hide header
 
@@ -434,30 +427,41 @@ new Swiper(".card", {
           document
             .querySelector(".active-popup")
             .classList.remove("active-popup");
-        const elementClose = document.querySelectorAll(".popup__close");
         const path = item.dataset.pathPopup;
         const popup = document.querySelector(`.${path}`);
 
-        if (elementClose.length > 0) {
-          elementClose.forEach((item, _) => {
-            item.addEventListener("click", (e) => {
-              popup.classList.remove("active-popup");
-            });
-          });
-        }
+        closePopup(popup);
 
+        document.querySelector('.page').style.overflowY = 'hidden';
+         
         popup.classList.add("active-popup");
-        popup.addEventListener("click", (e) => {
-          if (e.target === popup || e.target === popup.firstChild) {
-            popup.classList.remove("active-popup");
-          }
-        });
         setTimeout(() => {
           startPopup = true;
         }, 3000);
       }
     }
-  }
+
+
+
+    function closePopup(popup) {
+      const elementClose = document.querySelectorAll(".popup__close");
+      if (elementClose.length > 0) {
+        elementClose.forEach((item, _) => {
+          item.addEventListener("click", () => {
+            document.querySelector('.page').style.overflowY = 'auto';
+            popup.classList.remove("active-popup");
+          });
+        });
+      }
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup || e.target === popup.firstChild) {
+          document.querySelector('.page').style.overflowY = 'auto';
+          popup.classList.remove("active-popup");
+        }
+      });
+    }
+
+}
 
   //the show info about card signs
 

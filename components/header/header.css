@@ -107,6 +107,10 @@
   width: 100%;
 }
 
+.header__version {
+  display: none;
+}
+
 @media (max-width: 75.625em) {
   .header__header {
     justify-content: flex-start;
@@ -130,9 +134,11 @@
     right: -100%;
     min-height: 100vh;
     width: 60vw;
-    overflow-y: auto;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
     background-color: #4b4856;
-    padding: 6.166rem 1.944rem 3.88rem 1.944rem;
+    padding: 6.166rem 1.944rem 3.125rem 1.944rem;
   }
   .header__body .header__version {
     display: none;
@@ -144,6 +150,8 @@
     display: block;
     position: relative;
     z-index: 5;
+    overflow-y: scroll;
+    flex: 1 1 auto;
   }
   .header__version {
     position: static;
@@ -160,13 +168,9 @@
     padding: 0rem 1.1rem;
   }
   .header__body {
-    padding: 6.166rem 0.8rem 3.88rem 0.8rem;
+    padding: 6.166rem 0.8rem 3.125rem 0.8rem;
   }
 }
-.header__version {
-  display: none;
-}
-
 .body-menu-active {
   right: 0;
 }
