@@ -1496,7 +1496,7 @@
               </div>
               <label for="form-sign__checkbox" class="form-sign__text popup-text-info ">Чужой компьютер</label>
             </div>
-            <button class='form-sign__button button button-active' type="submit">Войти</button>
+               <button class='form-sign__button button button-active' type="submit">Войти</button>
             <div class="form-sign__question">
               <p class="form-sign__text popup-text-info">Нет аккаунта?</p>
               <button data-path-popup="popup-register" class="form-sign__create-account popup-active"
@@ -1572,7 +1572,7 @@
                 Я согласен с <strong>правилами пользования и политикой конфиденциальности</strong>
               </label>
             </div>
-            <button class='form-register__button button button-active' type="submit">Зарегистрироваться</button>
+            <button class='form-register__button form-button button button-active' type="submit">Зарегистрироваться</button>
             <div class="form-sign__question">
               <p class="form-sign__text popup-text-info">Есть аккаунт?</p>
               <button data-path-popup="popup-sign" class="form-sign__create-account popup-active"
@@ -1602,10 +1602,10 @@
                 <label for="form-reset__email" class="form-placeholder">Электронная почта</label>
               </div>
             </div>
-            <button class="form-register__button form-register__button-go button button-active "
-              type="submit">Продолжить</button>
+                <button class="form-sign__button form-button form-button-go button button-active "
+                type="submit">Продолжить</button>
             <button data-path-popup="popup-sign"
-              class='form-register__button form-register__button-return button button-default popup-active'
+              class='form-button form-button-return button button-default popup-active'
               type="button">Отменить</button>
           </div>
         </form>
@@ -2882,7 +2882,7 @@
   <link rel="stylesheet" type="text/css" href="components/popupSign/popupSign.css">
 
   <!-- Popup-register -->
-  <script src="components/popupRegister/popupRegister.js"></script>
+  <script type="module" src="components/popupRegister/popupRegister.js"></script>
   <link rel="stylesheet" type="text/css" href="components/popupRegister/popupRegister.css">
 
   <!-- Popup-reset -->
@@ -2901,6 +2901,8 @@
 
   <!-- swiper -->
   <script src="swiper/swiper.js"></script>
+
+  <script src="utils/validation.js"></script>
 
   <!-- Global js -->
   <script type="module" src="js/index.js"></script>

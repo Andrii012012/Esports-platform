@@ -1,4 +1,3 @@
-import validationField from "../utils/validation.js";
 import { clearClass } from "../utils/clearClass.js";
 
 function render(func, delay) {
@@ -120,6 +119,8 @@ function changeItemTabs() {
 
 changeItemTabs();
 
+let opportunityCard = null;
+
 if (window.innerWidth <= 960) {
   $(".opportunity__cards").slick({
     arrows: false,
@@ -139,7 +140,7 @@ function activeSlideCard() {
 
   window.addEventListener("resize", function () {
     if (window.innerWidth > 960) {
-      $(".opportunity__cards").slick("unslick");
+      opportunityCard = $(".opportunity__cards").slick("unslick");
       isRender = true;
     } else if (window.innerWidth <= 960 && isRender) {
       opportunityCard = $(".opportunity__cards").slick({
@@ -157,22 +158,6 @@ function activeSlideCard() {
 }
 
 activeSlideCard();
-
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth >= 640) {
-//     itemTabs = $(".tabs__items").slick("unslick");
-//   } else {
-//     itemTabs = $(".tabs__items").slick({
-//       arrows: false,
-//       dots: false,
-//       speed: 800,
-//       infinite: false,
-//       draggable: true,
-//       swipe: true,
-//       touchMove: true,
-//     });
-//   }
-// });
 
 let gratitudeSlide = $(".gratitude-table").slick({
   arrows: true,
@@ -544,125 +529,6 @@ new Swiper(".card", {
       img.src = src;
       input.setAttribute("type", "text");
       input.classList.remove("show-value");
-    }
-  }
-})();
-
-//validation fields
-
-(function () {
-  let time = 37;
-
-  let timeRepeatActive = 37000;
-
-  const allForms = document.querySelectorAll(".form-popup");
-
-  let timeGoValidation = 5001;
-
-  let isValidation = true;
-
-  let startTime = true;
-
-  if (allForms.length > 0) {
-    validationForm();
-  }
-
-  function validationForm() {
-    for (let i = 0; i < allForms.length; i++) {
-      allForms[i].addEventListener("submit", (e) => {
-        e.preventDefault();
-        let next = false;
-        const validationInput = document.querySelectorAll(
-          ".active-popup .form-field"
-        );
-
-        const validationCheckbox = document.querySelectorAll(
-          ".active-popup .check-checkbox"
-        );
-
-        if (validationInput.length > 0) {
-          if (isValidation) {
-            next = validationField(validationInput, validationCheckbox, 5000);
-            isValidation = false;
-            setTimeout(() => {
-              isValidation = true;
-            }, timeGoValidation);
-          }
-        }
-
-        if (next) {
-          const formRegister = document.querySelector(".form-register");
-          const formReset = document.querySelector(".form-reset");
-
-          if (e.target === formReset) {
-            const elementBody = document.querySelector(
-              ".form-reset__email-body"
-            );
-            elementBody.classList.add("popup-body-active");
-            const inputEmail = document.getElementById("form-reset__email");
-            if (!document.querySelector(".checking")) {
-              const newElement = `
-                    <section class='checking'>
-                     <p class='checking__text popup-text-info'>На почту <span>${inputEmail.value}</span> отправлен код для восстановления пароля</p>
-                    <div class="checking__body checking-code">
-                      <p class="checking-code__text text-about">Введите 4-x значный код:</p>
-                      <input class="checking-code__input form-field" maxlength="1" type="text" name="code">
-                      <input class="checking-code__input form-field" maxlength="1" type="text" name="code">
-                      <input class="checking-code__input form-field" maxlength="1" type="text" name="code">
-                      <input class="checking-code__input form-field" maxlength="1" type="text" name="code">
-                     </div>
-                      <p class="checking__repeat-call popup-text-info">Запросить снова <span id='checking__time'>00:${time}</span></p>
-                       <p class='checking__error popup-text-info'>Неверный код!<p>
-                    </section>
-                  `;
-
-              elementBody.insertAdjacentHTML("afterend", newElement);
-            }
-            if (startTime) {
-              startTime = false;
-              const decrementTime = setInterval(() => {
-                renderTime(decrementTime, startTime);
-              }, 1000);
-              setTimeout(() => {
-                startTime = true;
-              }, timeRepeatActive);
-            }
-          }
-
-          if (e.target === formRegister) {
-            const container = document.querySelector(
-              ".popup-register__container"
-            );
-            if (container) {
-              if (!document.querySelector(".massage-confirmation")) {
-                const newElement = `
-                    <section class="massage-confirmation">
-                    <strong class="massage-confirmation__title">
-                       На указанный адрес отправлено письмо с подтверждением
-                     </strong>
-                     <p class="massage-confirmation__subtitle text-about">
-                       Перейдите по ссылке в письме, чтобы привязать адрес к вашему аккаунту
-                     </p>
-                  </section>
-                    `;
-                container.insertAdjacentHTML("beforebegin", newElement);
-                setTimeout(() => {
-                  document.querySelector(".massage-confirmation").remove();
-                }, 5000);
-              }
-            }
-          }
-        }
-      });
-    }
-    function renderTime(decrementTime) {
-      time--;
-      const element = document.getElementById("checking__time");
-      element.innerHTML = `00:${time}`;
-      if (time < 1) {
-        time = 37;
-        clearInterval(decrementTime);
-      }
     }
   }
 })();

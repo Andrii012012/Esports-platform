@@ -37,7 +37,7 @@
   font-weight: normal;
 }
 
-.form-register__button {
+.form-button {
   margin-bottom: 0.833rem;
 }
 
@@ -51,11 +51,11 @@
   flex-direction: column;
 }
 
-.form-register__button {
+.form-button {
   align-self: center;
 }
 
-.form-register__button {
+.form-button {
   width: 100%;
 }
 

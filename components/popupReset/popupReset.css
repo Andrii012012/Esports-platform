@@ -23,6 +23,10 @@
   margin-bottom: 1.94rem;
 }
 
+.form-continue {
+  width: 100%;
+}
+
 @media (max-width: 22.5em) {
   .popup-reset__container {
     max-width: 100%;
