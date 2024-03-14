@@ -26,6 +26,7 @@ let scrollFullScroll = $(".page").slick({
   initialSlide: 0,
   vertical: true,
   draggable: false,
+  touchMove: false,
 });
 
 // hide header
@@ -34,7 +35,6 @@ let scrollFullScroll = $(".page").slick({
   const dotsPage = document.querySelector(".page .slick-dots");
   const childrenDotsPage = dotsPage.children;
   if (childrenDotsPage) {
-    console.log(childrenDotsPage);
     for (let i = 0; i < childrenDotsPage.length; i++) {
       childrenDotsPage[i].addEventListener("click", () => {
         const allSlidePage =
@@ -94,23 +94,38 @@ let itemTabs = $(".tabs__items").slick({
   touchMove: true,
 });
 
-slider.find(".slick-slide").css("margin", "0 100px");
+function activeSlideCard() {
+  let isRender = true;
+  slider.find(".slick-slide").css("margin", "0 100px");
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 960) {
-    $(".opportunity__cards").slick("unslick");
-  } else if (window.innerWidth <= 960) {
-    $(".opportunity__cards").slick({
-      arrows: false,
-      dots: false,
-      swipe: true,
-      variableWidth: true,
-      draggable: true,
-      touchMove: true,
-      slidesToShow: 3,
-    });
+  function createSlide() {
+    if (window.innerWidth <= 960) {
+      $(".opportunity__cards").slick({
+        arrows: false,
+        dots: false,
+        swipe: true,
+        variableWidth: true,
+        draggable: true,
+        touchMove: true,
+        slidesToShow: 3,
+      });
+    }
   }
-});
+
+  createSlide();
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 960 && !isRender) {
+      $(".opportunity__cards").slick("unslick");
+      isRender = true;
+    } else if (window.innerWidth <= 960 && isRender) {
+      createSlide();
+      isRender = false;
+    }
+  });
+}
+
+activeSlideCard();
 
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 640) {
@@ -593,6 +608,5 @@ let swiper = new Swiper(".card", {
     }
   }
 })();
-
 
 export { activeMenu };
