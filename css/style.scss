@@ -329,7 +329,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
+  overflow-y: auto;
+  min-height: 150%;
   background-color: rgba($color: #000000, $alpha: 0.5);
   opacity: 0;
   visibility: hidden;
@@ -350,7 +351,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-y: auto;
   transform: translateY(41px);
 }
 
