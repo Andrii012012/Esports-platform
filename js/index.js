@@ -17,6 +17,19 @@ let scrollFullScroll = $(".page").slick({
   touchMove: false,
 });
 
+if (innerWidth < 1211) {
+  slickSlideMobile();
+}
+
+function slickSlideMobile() {
+  const slides = [2, 4, 8, 9, 10, 11];
+  for (let index = 0; index < slides.length; index++) {
+    if (slides[index]) {
+      scrollFullScroll.slick("slickRemove", index);
+    }
+  }
+}
+
 // hide header
 
 (function () {
@@ -196,12 +209,14 @@ function findActiveSlide() {
   const activeTab = document.querySelectorAll(".slick-arrow");
 
   function initialBeginTab() {
-    if (window.innerWidth > 640) {
-      tabItem[0].classList.add("active-tab");
-      tabs.slick("goTo", 0);
-    } else {
-      tabItem[3].classList.add("active-tab");
-      tabs.slick("goTo", 3);
+    if (tabItem.length > 0) {
+      if (window.innerWidth > 640) {
+        tabItem[0].classList.add("active-tab");
+        tabs.slick("goTo", 0);
+      } else {
+        tabItem[3].classList.add("active-tab");
+        tabs.slick("goTo", 3);
+      }
     }
   }
 
@@ -295,10 +310,10 @@ function activeMenu() {
     if (nameElementGoTp === elementGoTp) {
       document
         .querySelector(".header__burger")
-        .classList.toggle("burger-active");
+        .classList.remove("burger-active");
       document
         .querySelector(".header__body")
-        .classList.toggle("body-menu-active");
+        .classList.remove("body-menu-active");
       scrollFullScroll.slick("goTo", index);
     }
   }
