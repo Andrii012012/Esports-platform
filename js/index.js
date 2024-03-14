@@ -1,17 +1,5 @@
 import { clearClass } from "../utils/clearClass.js";
 
-function render(func, delay) {
-  if (render.isRender) {
-    render.isRender = false;
-    func();
-    setTimeout(() => {
-      render.isRender = true;
-    }, delay);
-  }
-}
-
-render.isRender = true;
-
 //global Swiper
 
 $(document).ready(function () {});
@@ -305,6 +293,12 @@ function activeMenu() {
     const elementGoTp = slide[index].dataset.tp;
     const nameElementGoTp = item.getAttribute("href").replace("#", "");
     if (nameElementGoTp === elementGoTp) {
+      document
+        .querySelector(".header__burger")
+        .classList.toggle("burger-active");
+      document
+        .querySelector(".header__body")
+        .classList.toggle("body-menu-active");
       scrollFullScroll.slick("goTo", index);
     }
   }
@@ -405,10 +399,10 @@ new Swiper(".card", {
   function initialPopup() {
     const elementsOpenPopup = document.querySelectorAll(".popup-active");
     elementsOpenPopup.forEach((item, _) => {
-      item.addEventListener("click", (event) => openPopup(event, item));
+      item.addEventListener("click", () => openPopup(item));
     });
 
-    function openPopup(event, item) {
+    function openPopup(item) {
       if (startPopup) {
         startPopup = false;
         if (document.querySelector(".active-popup"))
@@ -439,6 +433,8 @@ new Swiper(".card", {
       }
     }
   }
+
+  //the show info about card signs
 
   const elementCardStatics = document.querySelectorAll("[data-explain]");
 
