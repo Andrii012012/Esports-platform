@@ -26,6 +26,7 @@ let scrollFullScroll = $(".page").slick({
   initialSlide: 0,
   vertical: true,
   draggable: false,
+  swipe: false,
   touchMove: false,
 });
 
@@ -34,25 +35,34 @@ let scrollFullScroll = $(".page").slick({
 (function () {
   const dotsPage = document.querySelector(".page .slick-dots");
   const childrenDotsPage = dotsPage.children;
+
+  function changeElement(index, indexParent) {
+    if (
+      childrenDotsPage[indexParent].className === "slick-active" &&
+      indexParent === index
+    ) {
+      document.querySelector("header").style.zIndex = "0";
+    } else {
+      document.querySelector("header").style.zIndex = "10";
+    }
+  }
+
+  function findElement(element, indexParent) {
+    if (element.length > 0) {
+      for (let index = 0; index < element.length; index++) {
+        if (element[index].dataset.hideHeader) {
+          changeElement(index, indexParent);
+        }
+      }
+    }
+  }
+
   if (childrenDotsPage) {
     for (let i = 0; i < childrenDotsPage.length; i++) {
       childrenDotsPage[i].addEventListener("click", () => {
         const allSlidePage =
           scrollFullScroll[0].children[0].children[0].children;
-        if (allSlidePage.length > 0) {
-          for (let index = 0; index < allSlidePage.length; index++) {
-            if (allSlidePage[index].dataset.hideHeader) {
-              if (
-                childrenDotsPage[i].className === "slick-active" &&
-                i === index
-              ) {
-                document.querySelector("header").style.zIndex = "0";
-              } else {
-                document.querySelector("header").style.zIndex = "10";
-              }
-            }
-          }
-        }
+        findElement(allSlidePage, i);
       });
     }
   }
@@ -84,23 +94,55 @@ let tabs = $(".choose__body-tabs").slick({
   ],
 });
 
-let itemTabs = $(".tabs__items").slick({
-  arrows: false,
-  dots: false,
-  speed: 800,
-  infinite: false,
-  draggable: true,
-  swipe: true,
-  touchMove: true,
-});
+let itemTabs = null;
+
+function changeItemTabs() {
+  let isRender = true;
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 640) {
+      itemTabs = $(".tabs__items").slick("unslick");
+      isRender = true;
+    } else if (window.innerWidth < 640 && isRender) {
+      itemTabs = $(".tabs__items").slick({
+        arrows: false,
+        dots: false,
+        speed: 800,
+        infinite: false,
+        draggable: true,
+        swipe: true,
+        touchMove: true,
+      });
+      isRender = false;
+    }
+  });
+}
+
+changeItemTabs();
+
+if (window.innerWidth <= 960) {
+  $(".opportunity__cards").slick({
+    arrows: false,
+    dots: false,
+    swipe: true,
+    variableWidth: true,
+    draggable: true,
+    touchMove: true,
+    slidesToShow: 3,
+  });
+}
 
 function activeSlideCard() {
   let isRender = true;
+
   slider.find(".slick-slide").css("margin", "0 100px");
 
-  function createSlide() {
-    if (window.innerWidth <= 960) {
-      $(".opportunity__cards").slick({
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 960) {
+      $(".opportunity__cards").slick("unslick");
+      isRender = true;
+    } else if (window.innerWidth <= 960 && isRender) {
+      opportunityCard = $(".opportunity__cards").slick({
         arrows: false,
         dots: false,
         swipe: true,
@@ -109,17 +151,6 @@ function activeSlideCard() {
         touchMove: true,
         slidesToShow: 3,
       });
-    }
-  }
-
-  createSlide();
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 960 && !isRender) {
-      $(".opportunity__cards").slick("unslick");
-      isRender = true;
-    } else if (window.innerWidth <= 960 && isRender) {
-      createSlide();
       isRender = false;
     }
   });
@@ -127,21 +158,21 @@ function activeSlideCard() {
 
 activeSlideCard();
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth >= 640) {
-    itemTabs = $(".tabs__items").slick("unslick");
-  } else {
-    itemTabs = $(".tabs__items").slick({
-      arrows: false,
-      dots: false,
-      speed: 800,
-      infinite: false,
-      draggable: true,
-      swipe: true,
-      touchMove: true,
-    });
-  }
-});
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth >= 640) {
+//     itemTabs = $(".tabs__items").slick("unslick");
+//   } else {
+//     itemTabs = $(".tabs__items").slick({
+//       arrows: false,
+//       dots: false,
+//       speed: 800,
+//       infinite: false,
+//       draggable: true,
+//       swipe: true,
+//       touchMove: true,
+//     });
+//   }
+// });
 
 let gratitudeSlide = $(".gratitude-table").slick({
   arrows: true,
@@ -185,33 +216,43 @@ slider.slick("setPosition");
 //tabs
 
 function findActiveSlide() {
-  let delay = 1000;
+  let isRender = true;
+
   //initial 0 slide
   const tabItem = document.querySelectorAll(".tabs__item");
-  if (window.innerWidth > 640) {
-    tabItem[0].classList.add("active-tab");
-    tabs.slick("goTo", 0);
-  } else {
-    tabItem[3].classList.add("active-tab");
-    tabs.slick("goTo", 3);
-  }
-  window.addEventListener("resize", (e) => {
-    if (window.innerWidth <= 640) {
-      clearClass(tabItem, "active-tab");
-      tabItem[3].classList.add("active-tab");
-      tabs.slick("goTo", 3);
-      render(findActiveSlide, delay);
-    } else {
-      clearClass(tabItem, "active-tab");
+  const activeTab = document.querySelectorAll(".slick-arrow");
+
+  function initialBeginTab() {
+    if (window.innerWidth > 640) {
       tabItem[0].classList.add("active-tab");
       tabs.slick("goTo", 0);
-      render(findActiveSlide, delay);
+    } else {
+      tabItem[3].classList.add("active-tab");
+      tabs.slick("goTo", 3);
     }
-  });
+  }
 
-  //find all arrow
-  setTimeout(() => {
-    const activeTab = document.querySelectorAll(".slick-arrow");
+  initialBeginTab();
+
+  function hungleChangingTab() {
+    window.addEventListener("resize", (e) => {
+      if (window.innerWidth <= 640) {
+        clearClass(tabItem, "active-tab");
+        tabItem[3].classList.add("active-tab");
+        tabs.slick("goTo", 3);
+        isRender = true;
+      } else if (window.innerHeight > 640 && isRender) {
+        clearClass(tabItem, "active-tab");
+        tabItem[0].classList.add("active-tab");
+        tabs.slick("goTo", 0);
+        isRender = false;
+      }
+    });
+  }
+
+  hungleChangingTab();
+
+  function addHungleElements() {
     if (activeTab.length > 0) {
       for (let element = 0; element < activeTab.length; element++) {
         activeTab[element].addEventListener("click", findActiveTab);
@@ -225,6 +266,10 @@ function findActiveSlide() {
         }
       }
     }
+  }
+
+  setTimeout(() => {
+    addHungleElements();
   }, 100);
 }
 
@@ -260,18 +305,22 @@ function activeMenu() {
   }
 
   function menuActive() {
-    const elementSlide = scrollFullScroll.slick("getSlick").$slides;
-    for (let i = 0; i < elementSlide.length; i++) {
+    const slide = scrollFullScroll.slick("getSlick").$slides;
+    for (let index = 0; index < slide.length; index++) {
       menuElement.forEach((item, _) => {
-        item.addEventListener("click", (e) => {
-          document.querySelector("header").style.zIndex = "10";
-          const elementGoTp = elementSlide[i].dataset.tp;
-          const nameElementGoTp = item.getAttribute("href").replace("#", "");
-          if (nameElementGoTp === elementGoTp) {
-            scrollFullScroll.slick("goTo", i);
-          }
-        });
+        item.addEventListener("click", () =>
+          hungleMoveSlide(slide, item, index)
+        );
       });
+    }
+  }
+
+  function hungleMoveSlide(slide, item, index) {
+    document.querySelector("header").style.zIndex = "10";
+    const elementGoTp = slide[index].dataset.tp;
+    const nameElementGoTp = item.getAttribute("href").replace("#", "");
+    if (nameElementGoTp === elementGoTp) {
+      scrollFullScroll.slick("goTo", index);
     }
   }
 }
@@ -282,23 +331,28 @@ scrollFullScroll.slick("setPosition");
 
 //scroll down slide
 
-const scrollDown = document.querySelectorAll(".scroll-down");
+function activeScrollDown() {
+  const scrollDown = document.querySelectorAll(".scroll-down");
 
-if (scrollDown.length > 0) {
-  scrollToGo();
-}
+  if (scrollDown.length > 0) {
+    scrollToGo();
+  }
 
-function scrollToGo() {
-  scrollDown.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      let indexIncrement = index + 1;
-      scrollFullScroll.slick("goTo", indexIncrement);
+  function scrollToGo() {
+    scrollDown.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        let indexIncrement = index + 1;
+        scrollFullScroll.slick("goTo", indexIncrement);
+      });
     });
-  });
+  }
 }
+
+activeScrollDown();
+
 // ;
 
-let swiper = new Swiper(".card", {
+new Swiper(".card", {
   slidesPerView: "auto",
   effect: "coverflow",
   loop: true,
@@ -365,7 +419,7 @@ let swiper = new Swiper(".card", {
 
   function initialPopup() {
     const elementsOpenPopup = document.querySelectorAll(".popup-active");
-    elementsOpenPopup.forEach((item, index) => {
+    elementsOpenPopup.forEach((item, _) => {
       item.addEventListener("click", (event) => openPopup(event, item));
     });
 
@@ -465,28 +519,32 @@ let swiper = new Swiper(".card", {
   const elementHideField = document.querySelectorAll(".hide-value");
 
   if (elementHideField.length > 0) {
-    hideOrShowElement();
+    getDataElementField();
   }
 
-  function hideOrShowElement() {
+  function getDataElementField() {
     elementHideField.forEach((item, index) => {
       const img = item.children[0];
       const src = img.src;
       const dataSrc = img.dataset.src;
       const allInput = document.querySelectorAll(".form-field-active");
       const input = allInput[index];
-      item.addEventListener("click", () => {
-        if (!input.matches('[class$="show-value"]')) {
-          img.src = dataSrc;
-          input.setAttribute("type", "password");
-          input.classList.add("show-value");
-        } else {
-          img.src = src;
-          input.setAttribute("type", "text");
-          input.classList.remove("show-value");
-        }
-      });
+      item.addEventListener("click", () =>
+        hungleElementField(src, dataSrc, input)
+      );
     });
+  }
+
+  function hungleElementField(src, dataSrc, input) {
+    if (!input.matches('[class$="show-value"]')) {
+      img.src = dataSrc;
+      input.setAttribute("type", "password");
+      input.classList.add("show-value");
+    } else {
+      img.src = src;
+      input.setAttribute("type", "text");
+      input.classList.remove("show-value");
+    }
   }
 })();
 
