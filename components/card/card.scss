@@ -172,6 +172,7 @@
 .card__popup-description--active{
   top: -5px;
   padding: 0.1rem 0.88rem;
+  white-space: nowrap;
 }
 
 .active-popup-description .card__popup-description {

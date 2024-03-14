@@ -61,7 +61,7 @@
     transform: translate(40%, 0px);
   }
   .game__content {
-    margin-bottom: 8.2222rem;
+    margin-bottom: 1rem;
     margin-top: 8.94rem;
     flex-wrap: wrap;
   }
@@ -103,7 +103,7 @@
   }
   .game__content {
     margin-top: 8.38rem;
-    margin-bottom: 9.88rem;
+    margin-bottom: 1rem;
   }
   .game__block-img {
     top: 41.075%;

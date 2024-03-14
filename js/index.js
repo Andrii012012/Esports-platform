@@ -17,18 +17,28 @@ let scrollFullScroll = $(".page").slick({
   touchMove: false,
 });
 
-if (innerWidth < 1211) {
+if (innerWidth < 961) {
   slickSlideMobile();
 }
 
 function slickSlideMobile() {
-  const slides = [2, 4, 8, 9, 10, 11];
-  for (let index = 0; index < slides.length; index++) {
-    if (slides[index]) {
+  const slides = [
+    "footer",
+    "advantages",
+    "support",
+    "contacts",
+    "gratitude",
+  ];
+  const slideParent = scrollFullScroll[0].slick.$slides;
+  const slideLength = scrollFullScroll[0].slick.$slides.length;
+  for (let index = 0; index < slideLength; index++) {
+    if (slides.includes(slideParent[index].classList[0])) {
       scrollFullScroll.slick("slickRemove", index);
     }
   }
+  scrollFullScroll.slick("slickRemove", 3);
 }
+
 
 // hide header
 
