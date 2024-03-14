@@ -450,6 +450,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-y: auto;
   transform: translateY(41px);
 }
 
@@ -627,7 +628,7 @@ svg {
 }
 
 .popup__close {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 50px;
   width: 26px;
