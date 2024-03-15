@@ -432,8 +432,9 @@ new Swiper(".card", {
 
         closePopup(popup);
 
-        document.querySelector('.page').style.overflowY = 'hidden';
-         
+        document.querySelector(".page").style.overflowY = "hidden";
+        document.body.style.overflowY = "auto";
+
         popup.classList.add("active-popup");
         setTimeout(() => {
           startPopup = true;
@@ -441,27 +442,29 @@ new Swiper(".card", {
       }
     }
 
-
-
     function closePopup(popup) {
       const elementClose = document.querySelectorAll(".popup__close");
       if (elementClose.length > 0) {
         elementClose.forEach((item, _) => {
           item.addEventListener("click", () => {
-            document.querySelector('.page').style.overflowY = 'auto';
+            lockScroll();
             popup.classList.remove("active-popup");
           });
         });
       }
       popup.addEventListener("click", (e) => {
         if (e.target === popup || e.target === popup.firstChild) {
-          document.querySelector('.page').style.overflowY = 'auto';
+          lockScroll();
           popup.classList.remove("active-popup");
         }
       });
     }
 
-}
+    function lockScroll() {
+      document.querySelector(".page").style.overflowY = "auto";
+      document.body.style.overflowY = "hidden";
+    }
+  }
 
   //the show info about card signs
 
@@ -540,12 +543,12 @@ new Swiper(".card", {
       const allInput = document.querySelectorAll(".form-field-active");
       const input = allInput[index];
       item.addEventListener("click", () =>
-        hungleElementField(src, dataSrc, input)
+        hungleElementField(src, dataSrc, input, img)
       );
     });
   }
 
-  function hungleElementField(src, dataSrc, input) {
+  function hungleElementField(src, dataSrc, input, img) {
     if (!input.matches('[class$="show-value"]')) {
       img.src = dataSrc;
       input.setAttribute("type", "password");

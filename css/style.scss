@@ -59,7 +59,9 @@
 
 body {
   font-family: "Raleway";
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
 }
 
 .wrapper {
@@ -329,9 +331,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  overflow-y: auto;
-  min-height: 150%;
-  background-color: rgba($color: #000000, $alpha: 0.5);
+  min-height: 100%;
   opacity: 0;
   visibility: hidden;
   z-index: 10;
@@ -352,6 +352,7 @@ body {
   align-items: center;
   position: relative;
   transform: translateY(41px);
+  box-shadow: 0px 0px 5px 0.5px rgba($color: #000000, $alpha: 0.5);
 }
 
 .popup-card__container {
