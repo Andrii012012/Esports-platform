@@ -397,7 +397,7 @@ body {
 }
 
 .page .slick-dots {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 3.125%;
   transform: translate(0, -50%);
