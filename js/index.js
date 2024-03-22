@@ -463,7 +463,7 @@ new Swiper(".card", {
       if (elementClose.length > 0) {
         elementClose.forEach((item, _) => {
           item.addEventListener("click", () => {
-            lockScroll();
+            // lockScroll();
             popup.classList.remove("active-popup");
           });
         });
@@ -477,8 +477,8 @@ new Swiper(".card", {
     }
 
     function lockScroll() {
-      document.querySelector(".page").style.overflowY = "auto";
-      document.body.style.overflowY = "hidden";
+      document.querySelector(".page").style.overflowY = "hidden";
+      document.body.style.overflowY = "scroll";
     }
   }
 
