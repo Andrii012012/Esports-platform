@@ -5,7 +5,6 @@
    const element = document.querySelectorAll('.statics__item'); 
     const lengthElement = element.length - 1;
     element.forEach((item, index) => {
-        console.log(item, index);
        if(lengthElement == index) {
          item.style.marginBottom = '0px';
        }

@@ -17,20 +17,36 @@ let scrollFullScroll = $(".page").slick({
   touchMove: false,
 });
 
-if (innerWidth < 961) {
-  slickSlideMobile();
-}
+(function () {
+  let isRender = false;
+
+  if (innerWidth < 961 && !isRender) {
+    slickSlideMobile();
+    isRender = true;
+  }
+
+  window.addEventListener("resize", () => {
+    if (innerWidth < 961 && !isRender) {
+      window.location.reload();
+      isRender = true;
+    } else if (innerWidth > 960 && isRender) {
+      window.location.reload();
+      isRender = false;
+    }
+  });
+})();
 
 function slickSlideMobile() {
   const slides = ["footer", "advantages", "support", "contacts", "gratitude"];
   const slideParent = scrollFullScroll[0].slick.$slides;
-  const slideLength = scrollFullScroll[0].slick.$slides.length;
-  for (let index = 0; index < slideLength; index++) {
-    if (slides.includes(slideParent[index].classList[0])) {
+  slideParent.each((index, item) => {
+    if (slides.includes(item.classList[0])) {
       scrollFullScroll.slick("slickRemove", index);
+      item.style.display = "none";
     }
-  }
+  });
   scrollFullScroll.slick("slickRemove", 3);
+  scrollFullScroll.slick("setPosition");
 }
 
 // hide header
@@ -227,12 +243,12 @@ function findActiveSlide() {
 
   function hungleChangingTab() {
     window.addEventListener("resize", (e) => {
-      if (window.innerWidth <= 640) {
+      if (window.innerWidth <= 640 && tabItem.length > 3) {
         clearClass(tabItem, "active-tab");
         tabItem[3].classList.add("active-tab");
         tabs.slick("goTo", 3);
         isRender = true;
-      } else if (window.innerHeight > 640 && isRender) {
+      } else if (window.innerHeight > 640 && isRender && tabItem.length > 3) {
         clearClass(tabItem, "active-tab");
         tabItem[0].classList.add("active-tab");
         tabs.slick("goTo", 0);
