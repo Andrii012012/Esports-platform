@@ -1,7 +1,7 @@
 @import "Null.scss";
-@import "../utils/mixin.scss";
-@import '../simpleBar/simplebar.css';
-@import "../utils//animation.scss";
+@import "../utils/common/mixin.scss";
+@import "../simpleBar/simplebar.css";
+@import "../utils/common/animation.scss";
 
 //fonts
 
@@ -520,7 +520,6 @@ svg {
   pointer-events: none;
 }
 
-
 .popup-text-info {
   color: #fff;
   font-size: 0.777rem;
@@ -529,7 +528,6 @@ svg {
     color: #f04451;
   }
 }
-
 
 .popup__close {
   position: fixed;
@@ -641,7 +639,6 @@ svg {
   }
 }
 
-
 //styles for create dom elements js
 
 .checking-code__input {
@@ -728,10 +725,6 @@ svg {
   font-weight: normal;
 }
 
-
-
-
-
 .container-info-about {
   max-width: 76.9444rem;
   padding: 0rem 1.1111rem;
@@ -743,7 +736,6 @@ svg {
   overflow-y: auto;
 }
 
-
 .content-info-about {
   max-width: 51.1111rem;
   width: 100%;
@@ -751,39 +743,38 @@ svg {
   color: #fff;
   display: flex;
   flex-direction: column;
-   a{
+  a {
     color: #fff;
-   }
+  }
 }
 
-.paragraph-title{
+.paragraph-title {
   font-size: 1.333rem;
   line-height: 1.5em;
   font-weight: 700;
   margin-bottom: 1.388rem;
 }
 
-.info-list__body-paragraph{
+.info-list__body-paragraph {
   margin-bottom: 2.77rem;
 }
 
-.info-point{
+.info-point {
   margin-bottom: 1.388rem;
   line-height: 1.5em;
-   &:last-child{
-     margin-bottom: 0rem;
-   }
-  span{
+  &:last-child {
+    margin-bottom: 0rem;
+  }
+  span {
     margin-right: 5px;
   }
 }
 
-.info-list__list{
+.info-list__list {
   margin-bottom: 1.388rem;
 }
 
 //scroll bar
-
 
 .container-info-about .simplebar-content {
   display: flex;
@@ -802,7 +793,9 @@ svg {
   margin-top: 10.944rem;
 }
 
-.container-info-about .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+.container-info-about
+  .simplebar-track.simplebar-vertical
+  .simplebar-scrollbar:before {
   min-height: 27px;
   top: 2px;
   min-width: 5px;
@@ -813,16 +806,16 @@ svg {
 }
 
 .social-network {
-  svg{
-  fill: #FAFAFA;
-  transition: 0.3s linear;
-  &:hover {
+  svg {
+    fill: #fafafa;
     transition: 0.3s linear;
-    fill: rgba(240, 68, 81, 1);
-    transform: scale(1.2) rotate(-4deg);
-    pointer-events:painted;
+    &:hover {
+      transition: 0.3s linear;
+      fill: rgba(240, 68, 81, 1);
+      transform: scale(1.2) rotate(-4deg);
+      pointer-events: painted;
+    }
   }
- }
 }
 
 //media styles

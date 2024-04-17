@@ -1,7 +1,6 @@
+@use "../../utils/common/breakpoints.scss" as b;
 
-//960
-
-@media (max-width: 60em) {
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
   .footer__body-list {
     flex-wrap: nowrap;
   }
@@ -79,9 +78,7 @@
   }
 }
 
-//640
-
-@media (max-width: 40em) {
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
   .footer__menu-items {
     margin-right: 10px;
     width: 100%;
@@ -148,9 +145,7 @@
   }
 }
 
-//450
-
-@media (max-width: 28.125em) {
+@media (max-width: map-get(b.$breakpoints, "phone")) {
   .footer__body-info {
     display: contents;
   }
@@ -227,7 +222,7 @@
       margin-right: 0px;
     }
   }
-  .footer__social-media{
+  .footer__social-media {
     display: flex;
     justify-content: center;
   }

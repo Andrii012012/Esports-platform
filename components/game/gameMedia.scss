@@ -1,6 +1,6 @@
-//960px
+@use "../../utils/common/breakpoints.scss" as b;
 
-@media (max-width: 60em) {
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
   .game__items {
     flex-direction: column;
   }
@@ -63,8 +63,7 @@
   }
 }
 
-//640px
-@media (max-width: 40em) {
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
   .game__block-img {
     position: absolute;
     width: 100%;
@@ -104,7 +103,7 @@
 
 //360px
 
-@media (max-width: 22.5em) {
+@media (max-width: map-get(b.$breakpoints, "phone")) {
   .container-btns {
     flex-direction: column;
   }

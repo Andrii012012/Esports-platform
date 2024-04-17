@@ -1,5 +1,4 @@
-
-@import '../../utils/mixin.scss';
+@import "../../utils/common/mixin.scss";
 
 .about {
   width: 100%;
@@ -101,7 +100,6 @@
   z-index: 0;
 }
 
-
 //effect fon
 
 .about__effect-top {
@@ -120,7 +118,6 @@
   z-index: 1;
 }
 
+//media style
 
-//media style 
-
-@import './aboutMedia.scss';
+@import "./aboutMedia.scss";

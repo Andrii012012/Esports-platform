@@ -1,6 +1,6 @@
-//960px
+@use "../../utils/common/breakpoints.scss" as b;
 
-@media (max-width: 60em) {
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
   .card-characters__container {
     margin-top: 8.11rem;
   }
@@ -31,9 +31,7 @@
   }
 }
 
-//640px
-
-@media (max-width: 40em) {
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
   .card__container-card {
     transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)
       scale(0.563);
@@ -61,9 +59,7 @@
   }
 }
 
-//360px
-
-@media (max-width: 22.5em) {
+@media (max-width: map-get(b.$breakpoints, "phone")) {
   .card__popup-description {
     font-size: 0.777rem;
   }
@@ -127,7 +123,7 @@
   .card__level {
     top: 12.37%;
     font-size: 1.416rem;
-   }
+  }
   .card__discipline {
     left: 10.684%;
   }
@@ -159,8 +155,7 @@
   .card__statics {
     margin-right: 0.527rem;
   }
-  .card-content-two__level{
+  .card-content-two__level {
     top: 10.5%;
   }
 }
-

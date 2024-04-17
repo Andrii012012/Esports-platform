@@ -1,0 +1,57 @@
+//animation breath
+
+@keyframes animationBreath {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//animation 360
+
+@keyframes animationRound {
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(40deg);
+  }
+  30% {
+    transform: rotate(80deg);
+  }
+  40% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(140deg);
+  }
+  60% {
+    transform: rotate(140deg);
+  }
+  70% {
+    transform: rotate(120deg);
+  }
+  80% {
+    transform: rotate(80deg);
+  }
+  90% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

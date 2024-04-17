@@ -1,6 +1,6 @@
-//1210px
+@use "../../utils/common/breakpoints.scss" as b;
 
-@media (max-width: 75.625em) {
+@media (max-width: map-get(b.$breakpoints, "descktop")) {
   .header__header {
     justify-content: flex-start;
   }
@@ -28,39 +28,35 @@
     flex-direction: column;
     background-color: #4b4856;
     padding: 6.166rem 1.944rem 3.125rem 1.944rem;
-     .header__version{
-        display: none;   
-     }
+    .header__version {
+      display: none;
+    }
   }
-  .header__lists{
+  .header__lists {
     flex-direction: column;
-   }
-   .header__navigation{
+  }
+  .header__navigation {
     display: block;
     position: relative;
     z-index: 5;
     flex: 1 1 auto;
   }
-  .header__version{
+  .header__version {
     position: static;
   }
 }
 
-
-//640px
-
-@media (max-width: 40em){
-    .header__container-btns {
-         display: none;
-      }
-      .header__burger {
-        order: 2;
-      }
-     .header__header{
-        padding: 0rem 1.1rem;
-     }
-     .header__body {
-      padding: 6.166rem 0.8rem 3.125rem 0.8rem;
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .header__container-btns {
+    display: none;
+  }
+  .header__burger {
+    order: 2;
+  }
+  .header__header {
+    padding: 0rem 1.1rem;
+  }
+  .header__body {
+    padding: 6.166rem 0.8rem 3.125rem 0.8rem;
   }
 }
-

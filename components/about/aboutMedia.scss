@@ -1,6 +1,6 @@
-//960px
+@use '../../utils/common/breakpoints.scss' as b;
 
-@media (max-width: 60em) {
+@media (max-width: map-get(b.$breakpoints, 'tablet')) {
     .about__content {
       grid-template-columns: 1fr 0.8fr;
       margin-bottom: 2.86rem;
@@ -62,9 +62,7 @@
     }
   }
   
-  //640px
-  
-  @media (max-width: 40em) {
+  @media (max-width: map-get(b.$breakpoints, 'phoneLandscape')) {
     .about__content {
       grid-template-columns: 1fr;
       grid-template-rows: 0fr 0fr;
@@ -131,9 +129,7 @@
     }
   }
   
-  //360
-  
-  @media (max-width: 22.5em) {
+  @media (max-width: map-get(b.$breakpoints, 'phone')) {
     .about__image-main {
       transform: translate(0%, 0%);
     }

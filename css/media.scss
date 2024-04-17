@@ -1,6 +1,6 @@
-//960px
+@use "../utils/common/breakpoints.scss" as b;
 
-@media (max-width: 60em) {
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
   .container-info {
     display: none;
   }
@@ -19,9 +19,7 @@
   }
 }
 
-// 640px
-
-@media (max-width: 40em) {
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
   .container-wrapper {
     padding: 0rem 1.1rem;
   }
@@ -34,18 +32,7 @@
   }
 }
 
-@media (max-width: 22.5em) {
-  .text-info {
-    font-size: 0.77rem;
-  }
-  .title-list {
-    font-size: 0.88rem;
-  }
-}
-
-// 360px
-
-@media (max-width: 22.5em) {
+@media (max-width: map-get(b.$breakpoints, "phone")) {
   .title {
     font-size: 1.333rem;
     line-height: 2rem;
@@ -76,5 +63,8 @@
   }
   .paragraph-title {
     font-size: 1rem;
+  }
+  .title-list {
+    font-size: 0.88rem;
   }
 }

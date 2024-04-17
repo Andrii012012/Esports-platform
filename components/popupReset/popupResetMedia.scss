@@ -1,6 +1,6 @@
-// 360px
+@use "../../utils/common/breakpoints.scss" as b;
 
-@media (max-width: 22.5em) {
+@media (max-width: map-get(b.$breakpoints, "phone")) {
   .popup-reset__container {
     max-width: 100%;
     width: 100%;

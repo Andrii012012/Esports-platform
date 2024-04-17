@@ -1,279 +1,273 @@
-@import "../../utils/mixin.scss";
+@use "../../utils/common/breakpoints.scss" as b;
+@import "../../utils/common/mixin.scss";
 
-//960
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
+  .statics__fragment-black-medium,
+  .statics__fragment-white-big,
+  .statics__fragment-white-medium {
+    display: none;
+  }
+  .statics__fragment-black-medium-two {
+    top: 19.75%;
+    left: 5.729%;
+  }
+  .statics__fragment-black-big {
+    top: 85%;
+    left: 72.29%;
+  }
 
-@media (max-width: 60em) {
-    .statics__fragment-black-medium,
-    .statics__fragment-white-big,
-    .statics__fragment-white-medium {
-      display: none;
-    }
-    .statics__fragment-black-medium-two {
-      top: 19.75%;
-      left: 5.729%;
-    }
-    .statics__fragment-black-big {
-      top: 85%;
-      left: 72.29%;
-    }
-  
-    .statics__effect-top {
-      top: -21%;
-      left: 46.56%;
-    }
-    .statics__effect-bottom {
-      left: 4.1666%;
-      top: initial;
-      bottom: -16.25%;
-    }
-    .statics__img {
-      img {
-        @include adaptive-size(510, 200);
-      }
-    }
-    .statics__content {
-      min-height: 27.11rem;
-      margin-top: 9.66rem;
-      margin-bottom: 7.66rem;
-    }
-    .statics__img-fragment1 {
-      position: absolute;
-      left: 51.041%;
-    }
-    .statics__img-fragment2 {
-      position: absolute;
-      left: 35.41%;
-    }
-    .statics__img-fragment3 {
-      position: absolute;
-      left: 19.79%;
-    }
-    .statics__img-fragment4 {
-      position: absolute;
-      left: 4.16%;
-    }
-    .statics__prize {
-      position: absolute;
-      top: 498px;
-      left: 38.54%;
-    }
-    .statics__tournament {
-      position: absolute;
-      top: 48.125%;
-      left: 3.9%;
-    }
-    .statics__match {
-      position: absolute;
-      top: 24.375%;
-      left: 20.2%;
-    }
-    .statics__users {
-      position: absolute;
-      top: 21.75%;
-      left: 51.56%;
-      max-width: 13rem;
-    }
-    .statics__img {
-      left: 0%;
-      top: 73px;
+  .statics__effect-top {
+    top: -21%;
+    left: 46.56%;
+  }
+  .statics__effect-bottom {
+    left: 4.1666%;
+    top: initial;
+    bottom: -16.25%;
+  }
+  .statics__img {
+    img {
+      @include adaptive-size(510, 200);
     }
   }
-  
-  //640px
-  
-  @media (max-width: 40em) {
-    .statics__img-fragment1 {
-      top: 70.125%;
-      left: 0%;
+  .statics__content {
+    min-height: 27.11rem;
+    margin-top: 9.66rem;
+    margin-bottom: 7.66rem;
+  }
+  .statics__img-fragment1 {
+    position: absolute;
+    left: 51.041%;
+  }
+  .statics__img-fragment2 {
+    position: absolute;
+    left: 35.41%;
+  }
+  .statics__img-fragment3 {
+    position: absolute;
+    left: 19.79%;
+  }
+  .statics__img-fragment4 {
+    position: absolute;
+    left: 4.16%;
+  }
+  .statics__prize {
+    position: absolute;
+    top: 498px;
+    left: 38.54%;
+  }
+  .statics__tournament {
+    position: absolute;
+    top: 48.125%;
+    left: 3.9%;
+  }
+  .statics__match {
+    position: absolute;
+    top: 24.375%;
+    left: 20.2%;
+  }
+  .statics__users {
+    position: absolute;
+    top: 21.75%;
+    left: 51.56%;
+    max-width: 13rem;
+  }
+  .statics__img {
+    left: 0%;
+    top: 73px;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .statics__img-fragment1 {
+    top: 70.125%;
+    left: 0%;
+  }
+  .statics__img-fragment2 {
+    top: 51.375%;
+    left: 0%;
+  }
+  .statics__img-fragment3 {
+    top: 32.625%;
+    left: 0%;
+  }
+  .statics__img-fragment4 {
+    top: 13.25%;
+    left: 0%;
+  }
+  .statics__img {
+    display: block;
+    top: 97.9%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    text-align: center;
+    img {
+      @include adaptive-size(523, 300);
     }
-    .statics__img-fragment2 {
-      top: 51.375%;
-      left: 0%;
-    }
-    .statics__img-fragment3 {
-      top: 32.625%;
-      left: 0%;
-    }
-    .statics__img-fragment4 {
-      top: 13.25%;
-      left: 0%;
-    }
-    .statics__img {
+  }
+  .statics__fragments {
+    display: flex;
+  }
+  .statics__tournament {
+    position: absolute;
+    top: 48.125%;
+    left: -0.5%;
+  }
+  .statics__match {
+    position: absolute;
+    top: 24.375%;
+    left: 1%;
+  }
+  .statics__item {
+    &::after {
+      content: "";
       display: block;
-      top: 97.9%;
-      left: 0%;
-      transform: translate(0%, 0%);
-      text-align: center;
-      img {
-        @include adaptive-size(523, 300);
-      }
-    }
-    .statics__fragments {
-      display: flex;
-    }
-    .statics__tournament {
+      background-color: rgb(240, 68, 81);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-top: 0;
       position: absolute;
-      top: 48.125%;
-      left: -0.5%;
-    }
-    .statics__match {
-      position: absolute;
-      top: 24.375%;
-      left: 1%;
-    }
-    .statics__item {
-      &::after {
-        content: "";
-        display: block;
-        background-color: rgb(240, 68, 81);
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin-top: 0;
-        position: absolute;
-        top: 0px;
-        left: -30px;
-      }
-    }
-  
-    .statics__users {
-      position: absolute;
-      top: 21.75%;
-      left: 2%;
-      max-width: 9rem;
-      top: 14.1%;
-      left: 56.25%;
-      &::after {
-        top: -8px;
-      }
-    }
-    .statics__prize {
-      position: absolute;
-      top: 37.5%;
-      left: 19.68%;
-      &::after {
-        top: -3px;
-      }
-    }
-    .statics__match {
-      position: absolute;
-      top: 52.87%;
-      left: 68.437%;
-      &:after {
-        top: -6px;
-      }
-    }
-    .statics__tournament {
-      position: absolute;
-      top: 67.875%;
-      left: 20%;
-      &::after {
-        top: initial;
-        bottom: 0px;
-      }
-    }
-    .statics__quantity {
-      font-size: 2.66rem;
-    }
-    .statics__content {
-      min-height: 29.166rem;
-      margin-top: 6.166rem;
-      margin-bottom: 9.3888rem;
-    }
-    //fragments
-    .statics__fragment-black-medium-two {
-      top: 20.125%;
-      left: 92.18%;
-    }
-    .statics__fragment-black-big {
-      top: 86.5%;
-      left: 81.25%;
-    }
-    //effects
-    .statics__effect-bottom {
-      top: 58.75%;
-      left: 63.75%;
-    }
-    .statics__effect-top {
-      top: -9.625%;
-      left: -24.375%;
+      top: 0px;
+      left: -30px;
     }
   }
-  
-  //360px
-  
-  @media (max-width: 22.5em) {
-    .statics__img-fragment3,
-    .statics__img-fragment4 {
-      display: none;
-    }
-    .statics__users,
-    .statics__prize,
-    .statics__match,
-    .statics__tournament {
-      position: static;
-    }
-    .statics__img-fragment1 {
-      position: absolute;
-      top: 27.75%;
-      left: 0;
-      width: 100%;
-      max-height: 100%;
-    }
-    .statics__img-fragment2 {
-      position: absolute;
-      top: 49.625%;
-      left: 0;
-      width: 100%;
-      max-height: 100%;
-    }
-    .statics__fragments {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 151px;
-    }
-    .statics__content {
-      min-height: auto;
-    }
-    .statics__item {
-      margin-bottom: 1.38rem;
-    }
-    .statics__body {
-      margin-top: 8.38rem;
-      margin-bottom: 8.61rem;
-    }
-    .statics__content {
-      display: contents;
-      margin: 0;
-    }
-    .statics__img {
-      left: 41.94%;
-      top: 73.625%;
-      @include adaptive-size(1000, 417);
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    //effects
-    .statics__effect-top {
-      top: -40.875%;
-      left: -69.722%;
-    }
-    .statics__effect-bottom {
-      top: 66.625%;
-      left: 70.8333%;
-    }
-  
-    //fragments
-    .statics__fragment-black-big {
-      top: 60.125%;
-      left: 58.611%;
-    }
-    .statics__fragment-black-medium-two {
-      top: 14.875%;
-      left: 75.55%;
+
+  .statics__users {
+    position: absolute;
+    top: 21.75%;
+    left: 2%;
+    max-width: 9rem;
+    top: 14.1%;
+    left: 56.25%;
+    &::after {
+      top: -8px;
     }
   }
-  
+  .statics__prize {
+    position: absolute;
+    top: 37.5%;
+    left: 19.68%;
+    &::after {
+      top: -3px;
+    }
+  }
+  .statics__match {
+    position: absolute;
+    top: 52.87%;
+    left: 68.437%;
+    &:after {
+      top: -6px;
+    }
+  }
+  .statics__tournament {
+    position: absolute;
+    top: 67.875%;
+    left: 20%;
+    &::after {
+      top: initial;
+      bottom: 0px;
+    }
+  }
+  .statics__quantity {
+    font-size: 2.66rem;
+  }
+  .statics__content {
+    min-height: 29.166rem;
+    margin-top: 6.166rem;
+    margin-bottom: 9.3888rem;
+  }
+  //fragments
+  .statics__fragment-black-medium-two {
+    top: 20.125%;
+    left: 92.18%;
+  }
+  .statics__fragment-black-big {
+    top: 86.5%;
+    left: 81.25%;
+  }
+  //effects
+  .statics__effect-bottom {
+    top: 58.75%;
+    left: 63.75%;
+  }
+  .statics__effect-top {
+    top: -9.625%;
+    left: -24.375%;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .statics__img-fragment3,
+  .statics__img-fragment4 {
+    display: none;
+  }
+  .statics__users,
+  .statics__prize,
+  .statics__match,
+  .statics__tournament {
+    position: static;
+  }
+  .statics__img-fragment1 {
+    position: absolute;
+    top: 27.75%;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+  }
+  .statics__img-fragment2 {
+    position: absolute;
+    top: 49.625%;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+  }
+  .statics__fragments {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 151px;
+  }
+  .statics__content {
+    min-height: auto;
+  }
+  .statics__item {
+    margin-bottom: 1.38rem;
+  }
+  .statics__body {
+    margin-top: 8.38rem;
+    margin-bottom: 8.61rem;
+  }
+  .statics__content {
+    display: contents;
+    margin: 0;
+  }
+  .statics__img {
+    left: 41.94%;
+    top: 73.625%;
+    @include adaptive-size(1000, 417);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  //effects
+  .statics__effect-top {
+    top: -40.875%;
+    left: -69.722%;
+  }
+  .statics__effect-bottom {
+    top: 66.625%;
+    left: 70.8333%;
+  }
+
+  //fragments
+  .statics__fragment-black-big {
+    top: 60.125%;
+    left: 58.611%;
+  }
+  .statics__fragment-black-medium-two {
+    top: 14.875%;
+    left: 75.55%;
+  }
+}
